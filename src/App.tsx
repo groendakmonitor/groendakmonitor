@@ -11,7 +11,11 @@ function App() {
     <div className="be-wrapper be-nosidebar-left">
     <nav className="navbar navbar-default navbar-fixed-top be-top-header">
       <div className="container-fluid">
-        <div className="navbar-header"><a href="index.html" className="navbar-brand" /></div>
+        <div className="navbar-header">
+          <div className="page-title">
+            De GroenDakMonitor
+          </div>
+        </div>
         <div className="be-right-navbar">
           <ul className="nav navbar-nav navbar-right be-user-nav">
             <li className="dropdown"><a href="#" data-toggle="dropdown" role="button" aria-expanded="false" className="dropdown-toggle"><img src="assets/img/avatar.png" alt="Avatar" /><span className="user-name">Túpac Amaru</span></a>
