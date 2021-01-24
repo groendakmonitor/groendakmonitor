@@ -95,7 +95,7 @@ function App() {
             <div className="widget widget-tile">
               <div id="spark1" className="chart sparkline" />
               <div className="data-info">
-                <div className="desc">New Users</div>
+                <div className="desc"></div>
                 <div className="value"><span className="indicator indicator-equal mdi mdi-chevron-right" /><span data-toggle="counter" data-end={113} className="number">0</span>
                 </div>
               </div>
@@ -105,7 +105,7 @@ function App() {
             <div className="widget widget-tile">
               <div id="spark2" className="chart sparkline" />
               <div className="data-info">
-                <div className="desc">Monthly Sales</div>
+                <div className="desc"></div>
                 <div className="value"><span className="indicator indicator-positive mdi mdi-chevron-up" /><span data-toggle="counter" data-end={80} data-suffix="%" className="number">0</span>
                 </div>
               </div>

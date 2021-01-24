@@ -9,11 +9,15 @@ const Weather = () => {
     // const stopLoading = () => setLoading(false);
     // const timeout = setTimeout(stopLoading, 1000);
     // return () => clearTimeout(timeout);
-    fetch('/api/weather-current.json')
+    fetch(`${process.env.PUBLIC_URL}/api/weather-current.json`)
       .then((res) => res.json())
       .then(json => {
         setData(json)
+      })
+      .catch((error) => {
+        console.error('Error:', error);
       });
+
   }, []);
   // 01d.png weather_icon_full_sun.svg
   // 01n.png weather_icon_night.svg
