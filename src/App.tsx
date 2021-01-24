@@ -4,6 +4,7 @@ import './App.css';
 import WaterChart from './components/dashboard/WaterChart';
 import Weather from './components/dashboard/Weather';
 import WaterSaved from './components/dashboard/WaterSaved';
+import Saturation from './components/dashboard/Saturation';
 
 function App() {
   return (
@@ -116,14 +117,7 @@ function App() {
             </div>
           </div>
           <div className="col-xs-12 col-md-6 col-lg-3">
-            <div className="widget widget-tile">
-              <div id="spark4" className="chart sparkline" />
-              <div className="data-info">
-                <div className="desc">Downloads</div>
-                <div className="value"><span className="indicator indicator-negative mdi mdi-chevron-down" /><span data-toggle="counter" data-end={113} className="number">0</span>
-                </div>
-              </div>
-            </div>
+            <Saturation />
           </div>
         </div>
         <div className="row">
