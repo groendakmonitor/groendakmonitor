@@ -1,24 +1,25 @@
 {
   "files": {
     "main.css": "/groendakmonitor/static/css/main.a2f08dea.chunk.css",
-    "main.js": "/groendakmonitor/static/js/main.ff1d420e.chunk.js",
-    "main.js.map": "/groendakmonitor/static/js/main.ff1d420e.chunk.js.map",
+    "main.js": "/groendakmonitor/static/js/main.c9b3de8f.chunk.js",
+    "main.js.map": "/groendakmonitor/static/js/main.c9b3de8f.chunk.js.map",
     "runtime-main.js": "/groendakmonitor/static/js/runtime-main.be0b56a4.js",
     "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.be0b56a4.js.map",
-    "static/js/2.c896dde5.chunk.js": "/groendakmonitor/static/js/2.c896dde5.chunk.js",
-    "static/js/2.c896dde5.chunk.js.map": "/groendakmonitor/static/js/2.c896dde5.chunk.js.map",
+    "static/js/2.33752881.chunk.js": "/groendakmonitor/static/js/2.33752881.chunk.js",
+    "static/js/2.33752881.chunk.js.map": "/groendakmonitor/static/js/2.33752881.chunk.js.map",
     "static/js/3.65fcd3e0.chunk.js": "/groendakmonitor/static/js/3.65fcd3e0.chunk.js",
     "static/js/3.65fcd3e0.chunk.js.map": "/groendakmonitor/static/js/3.65fcd3e0.chunk.js.map",
     "index.html": "/groendakmonitor/index.html",
     "static/css/main.a2f08dea.chunk.css.map": "/groendakmonitor/static/css/main.a2f08dea.chunk.css.map",
-    "static/js/2.c896dde5.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.c896dde5.chunk.js.LICENSE.txt",
+    "static/js/2.33752881.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.33752881.chunk.js.LICENSE.txt",
     "static/media/style.css": "/groendakmonitor/static/media/logo.2f6137b2.png",
+    "static/media/leaf.61e4fa80.svg": "/groendakmonitor/static/media/leaf.61e4fa80.svg",
     "static/media/weather.scss": "/groendakmonitor/static/media/weather_icon_thunder.84842da1.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.be0b56a4.js",
-    "static/js/2.c896dde5.chunk.js",
+    "static/js/2.33752881.chunk.js",
     "static/css/main.a2f08dea.chunk.css",
-    "static/js/main.ff1d420e.chunk.js"
+    "static/js/main.c9b3de8f.chunk.js"
   ]
 }
