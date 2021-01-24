@@ -12,7 +12,7 @@ const options = {
     xAxes: [{
       ticks: {
         callback: function(value:string , index: any, values: any) {
-          return new Date(value).toLocaleString()
+          return new Date(value).toLocaleTimeString()
         }
       },
     }]
@@ -63,13 +63,13 @@ const LineChart = () => {
             datasets: [{
               label: 'Inkomend water',
               data: incomingData,
-              fill: "start",
               backgroundColor: 'rgb(129, 173, 248)',
+              fill: "start",
             }, {
               label: 'Uitgaand water',
               data: outgoingData,
-              fill: "start",
               backgroundColor: 'rgb(66, 133, 244)',
+              fill: "start",
             }]
           });
           

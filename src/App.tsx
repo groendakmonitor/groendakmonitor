@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import WaterChart from './components/dashboard/WaterChart';
 import Weather from './components/dashboard/Weather';
+import WaterSaved from './components/dashboard/WaterSaved';
 
 function App() {
   return (
@@ -92,14 +93,7 @@ function App() {
       <div className="main-content container-fluid">
         <div className="row">
           <div className="col-xs-12 col-md-6 col-lg-3">
-            <div className="widget widget-tile">
-              <div id="spark1" className="chart sparkline" />
-              <div className="data-info">
-                <div className="desc"></div>
-                <div className="value"><span className="indicator indicator-equal mdi mdi-chevron-right" /><span data-toggle="counter" data-end={113} className="number">0</span>
-                </div>
-              </div>
-            </div>
+            <WaterSaved />
           </div>
           <div className="col-xs-12 col-md-6 col-lg-3">
             <div className="widget widget-tile">
