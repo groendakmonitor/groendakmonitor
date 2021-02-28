@@ -1,20 +1,49 @@
-const Admin = () => {
+import { clearAuthToken, getAuthHeader, getAuthToken } from "misc/authentication";
+import { CustomerListData } from "models/customer";
+import React, { useEffect, useState } from "react";
+import CustomerList from "../CustomerList";
+import Login from "../Login";
+
+interface Props {
+  onClose: () => void;
+}
+
+const Admin = ({ onClose }: Props) => {
+  const [authenticated, setAuthenticated] = useState(!!getAuthToken());
+  const [data, setData] = useState<CustomerListData[]>();
+
+  const handleLogout = () => {
+    clearAuthToken();
+    setAuthenticated(false);
+    onClose();
+  }
+
+  useEffect(() => {
+    if (authenticated && getAuthToken()) {
+      fetch(`${process.env.REACT_APP_API_URL}/customers`, {
+        method: 'get',
+        headers: [['Content-Type', 'application/json'], getAuthHeader()],
+      })
+      .then<CustomerListData[]>((response) => response.json())
+      .then((response) => {
+        setData(response);
+      })
+    }
+  }, [authenticated]);
+
   return (
-    <div className="modal fade" id="exampleModal" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div className="modal-dialog" role="document">
+    <div className="modal fade show d-block" role="dialog" aria-hidden="true">
+      <div className="modal-dialog modal-dialog-centered" role="document">
         <div className="modal-content">
           <div className="modal-header">
-            <h5 className="modal-title" id="exampleModalLabel">Modal title</h5>
-            <button type="button" className="close" data-dismiss="modal" aria-label="Close">
+            <h5 className="modal-title" id="exampleModalLabel">Admin</h5>
+            <button type="button" className="close" data-dismiss="modal" aria-label="Close" onClick={onClose}>
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div className="modal-body">
-            ...
-          </div>
-          <div className="modal-footer">
-            <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button type="button" className="btn btn-primary">Save changes</button>
+            { !authenticated && <Login onLogin={() => setAuthenticated(true)}/> }
+            { authenticated && data && <CustomerList data={data} onLogout={handleLogout} /> }
           </div>
         </div>
       </div>

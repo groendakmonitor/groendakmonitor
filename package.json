@@ -8,6 +8,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/react-fontawesome": "^0.1.14",
     "@reactchartjs/react-chart.js": "^1.0.0-rc.3",
+    "@rooks/use-key": "^4.9.2",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

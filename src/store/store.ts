@@ -2,24 +2,41 @@ import create from "zustand";
 import { WaterResponse } from "../models/water";
 
 type WaterStore = {
+  customerId?: number; // maybe this id should not be here
   waterData: WaterResponse[],
-  fetchWaterData(customerId: number): void,
+  setCustomerId: (customerId: number) => void;
+  fetchWaterData(): void,
   getTotalIncoming(): number,
   getTotalOutgoing(): number,
 }
 
+const determineInitialCustomerId = () => {
+  const fromStorage = localStorage.getItem("customerId");
+  if (!fromStorage) return undefined;
+  return parseInt(fromStorage)
+}
+
 export const useWaterStore = create<WaterStore>(
   (set, get): WaterStore => ({
+    customerId: determineInitialCustomerId(),
     waterData: [],
     
-    fetchWaterData(customerId: number): void{
-      fetch(`${process.env.REACT_APP_API_URL}/water/${customerId}`)
-        .then<WaterResponse[]>(res => res.json())
-        .then((data) => {
-          set({
-            waterData: data
+    setCustomerId: (customerId: number) => {
+      localStorage.setItem("customerId", customerId.toString());
+      set({ customerId });
+    },
+
+    fetchWaterData(): void {
+      const { customerId } = get();
+      if (customerId !== undefined) {
+        fetch(`${process.env.REACT_APP_API_URL}/water/${customerId}`)
+          .then<WaterResponse[]>(res => res.json())
+          .then((data) => {
+            set({
+              waterData: data
+            })
           })
-        })
+      }
     },
 
     getTotalIncoming: () => {
@@ -37,3 +54,4 @@ export const useWaterStore = create<WaterStore>(
     }
   })
 )
+

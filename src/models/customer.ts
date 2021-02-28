@@ -1,5 +1,5 @@
 export interface CustomerData {
-  id: string;
+  id: number;
   name: string;
   roof_size: number;
   roof_thickness: number;

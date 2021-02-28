@@ -1,14 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import WaterChart from '../dashboard/WaterChart';
 import Weather from '../dashboard/Weather';
 import WaterSaved from '../dashboard/WaterSaved';
 import Saturation from '../dashboard/Saturation';
 import Admin from 'components/admin/Admin';
+import useKey from "@rooks/use-key";
 import './styles/app.scss';
 
-function App() {
+const App = () => {
+  const [admin, setAdmin] = useState(false)
+
+  useKey(["~"], (a) => {
+    setAdmin(a => !a)
+  })
+
   return (
-    <div className="app d-flex pb-4">
+    <div className="app d-flex pb-4 align-items-center">
       <div className="main-content container-fluid d-flex flex-column px-4">
         <div className="row">
           <div className="col-xs-12 col-md-6 col-lg-3">
@@ -38,7 +45,7 @@ function App() {
             <Saturation />
           </div>
         </div>
-        <div className="row flex-grow-1">
+        <div className="row">
           <div className="col-md-8">
             <WaterChart />
           </div>
@@ -47,7 +54,7 @@ function App() {
           </div>
         </div>
       </div>
-      <Admin />
+      { admin && <Admin onClose={() => setAdmin(false)} /> }
     </div>
   );
 }
