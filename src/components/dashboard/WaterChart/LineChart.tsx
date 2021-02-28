@@ -84,7 +84,9 @@ const LineChart = () => {
 
   useEffect(() => {
     console.log('useeffect')
-    const timeout = setInterval(fetchWaterData, 2000)
+    const timeout = setInterval(() => {
+      fetchWaterData(2)
+    }, 2000)
     return () => clearInterval(timeout)
   }, [fetchWaterData])
 

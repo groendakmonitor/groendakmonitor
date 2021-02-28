@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { WeatherResponse } from "../../../typing/weather";
+import { WeatherResponse } from "../../../models/weather";
 import './styles/weather.scss';
 
 const Weather = () => {

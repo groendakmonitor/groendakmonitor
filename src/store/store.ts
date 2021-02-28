@@ -1,9 +1,9 @@
 import create from "zustand";
-import { WaterResponse } from "../typing/water";
+import { WaterResponse } from "../models/water";
 
 type WaterStore = {
   waterData: WaterResponse[],
-  fetchWaterData(): void,
+  fetchWaterData(customerId: number): void,
   getTotalIncoming(): number,
   getTotalOutgoing(): number,
 }
@@ -11,9 +11,9 @@ type WaterStore = {
 export const useWaterStore = create<WaterStore>(
   (set, get): WaterStore => ({
     waterData: [],
-
-    fetchWaterData() {
-      fetch("https://chatter-somber-scallion.glitch.me/waterLevel")
+    
+    fetchWaterData(customerId: number): void{
+      fetch(`${process.env.REACT_APP_API_URL}/water/${customerId}`)
         .then<WaterResponse[]>(res => res.json())
         .then((data) => {
           set({

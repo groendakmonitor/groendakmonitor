@@ -3,6 +3,7 @@ import WaterChart from '../dashboard/WaterChart';
 import Weather from '../dashboard/Weather';
 import WaterSaved from '../dashboard/WaterSaved';
 import Saturation from '../dashboard/Saturation';
+import Admin from 'components/admin/Admin';
 import './styles/app.scss';
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
           </div>
         </div>
       </div>
+      <Admin />
     </div>
   );
 }
