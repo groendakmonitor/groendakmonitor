@@ -1,0 +1,12 @@
+.app {
+  background: #68ae0c;
+  padding-top: 30px;
+  height: 100vh;
+    
+  .main-content {
+
+    > .row:first-child {
+      margin-bottom: 30px;
+    }
+  }
+}
