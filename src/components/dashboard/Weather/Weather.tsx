@@ -33,7 +33,7 @@ const Weather = () => {
   
   return (
     <div className={`widget widget-tile be-loading`}>
-      <div className="widget-head">
+      <div className="widget-header">
         <div className="title">
           { data?.name } 
         </div>

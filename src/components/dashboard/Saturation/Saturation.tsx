@@ -14,20 +14,11 @@ const Saturation = () => {
 
   return (
     <Widget loading={isNaN(saturation)}>
-      <div className="widget-head">
+      <div className="widget-header">
         <span className="title">Verzadiging</span>
       </div>
-      <div className="row">
-        <h1 className="col-xs-6">
-         <LeafSvg />
-        </h1>
-        <h1 className="col-xs-6">
+      <div className="widget-body text-larger">
           {isNaN(saturation) ? "" : `${saturation.toFixed(1)}%`}
-        </h1>
-      </div>
-      <div className="widget-head">
-      </div>
-      <div className="widget-chart-container">
       </div>
     </Widget>
   )

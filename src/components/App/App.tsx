@@ -16,32 +16,29 @@ const App = () => {
 
   return (
     <div className="app d-flex pb-4 align-items-center">
-      <div className="main-content container-fluid d-flex flex-column px-4">
+      <div className="main-content container d-flex flex-column px-4">
         <div className="row">
-          <div className="col-xs-12 col-md-6 col-lg-3">
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
             <WaterSaved />
           </div>
-          <div className="col-xs-12 col-md-6 col-lg-3">
-            <div className="widget widget-tile">
-              <div id="spark2" className="chart sparkline" />
-              <div className="data-info">
-                <div className="desc"></div>
-                <div className="value"><span className="indicator indicator-positive mdi mdi-chevron-up" /><span data-toggle="counter" data-end={80} data-suffix="%" className="number">0</span>
-                </div>
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
+            <div className="widget">
+              <div className="widget-header">
+                Besparing energie
+              </div>
+              <div className="widget-body">
               </div>
             </div>
           </div>
-          <div className="col-xs-12 col-md-6 col-lg-3">
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
             <div className="widget widget-tile">
-              <div id="spark3" className="chart sparkline" />
-              <div className="data-info">
-                <div className="desc">Impressions</div>
-                <div className="value"><span className="indicator indicator-positive mdi mdi-chevron-up" /><span data-toggle="counter" data-end={532} className="number">0</span>
-                </div>
+              <div className="widget-header">
+                Isolatie
               </div>
+              <div className="widget-body"></div>
             </div>
           </div>
-          <div className="col-xs-12 col-md-6 col-lg-3">
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
             <Saturation />
           </div>
         </div>

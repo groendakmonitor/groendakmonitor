@@ -27,40 +27,11 @@ const WaterSaved = () => {
 
   return (
     <Widget loading={loading}>
-      <div className="row">
-        <div className="col-xs-6">
-          <div className="widget-head">
-           <span className="title">Opgevangen water</span>
-          </div>
-          <div className="row">
-            <h1 className="col-xs-6">
-              {diff.toFixed(1)}L
-            </h1>
-            <h1 className="col-xs-6">
-              <FontAwesomeIcon icon="tint" color="rgb(66, 133, 244)" />
-            </h1>
-          </div>
-        </div>
-        <div className="col-xs-6">
-          <div className="widget-head">
-           <span className="title">Dat zijn</span>
-          </div>
-          <div className="row">
-            <h1 className="col-xs-6">
-              {bathtubs}
-            </h1>
-            <h1 className="col-xs-6">
-              <FontAwesomeIcon icon="bath" color="rgb(66, 133, 244)" />
-            </h1>
-          </div>
-          <div>
-            Badkuipen
-          </div>
-        </div>
-       </div>
-      <div className="widget-head">
+      <div className="widget-header">
+        <span className="title">Opgevangen water</span>
       </div>
-      <div className="widget-chart-container">
+      <div className="widget-body display-4">
+          {diff.toFixed(1)}L
       </div>
     </Widget>
   )

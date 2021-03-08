@@ -12,10 +12,10 @@ const WaterChart = () => {
 
   return (
     <Widget loading={loading}>
-      <div className="widget-head">
+      <div className="widget-header">
         <span className="title">Waterbalans</span>
       </div>
-      <div className="widget-chart-container">
+      <div className="widget-body widget-chart-container">
         <div id="main-chart">
           <LineChart />
         </div>
