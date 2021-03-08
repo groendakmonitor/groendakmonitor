@@ -30,7 +30,7 @@ const WaterSaved = () => {
       <div className="widget-header">
         <span className="title">Opgevangen water</span>
       </div>
-      <div className="widget-body display-4">
+      <div className="widget-body display-4 water-saved text-center">
           {diff.toFixed(1)}L
       </div>
     </Widget>

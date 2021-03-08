@@ -15,7 +15,7 @@ const App = () => {
   })
 
   return (
-    <div className="app d-flex pb-4 align-items-center">
+    <div className="app d-flex pb-4 align-items-center position-relative">
       <div className="main-content container d-flex flex-column px-4">
         <div className="row">
           <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
@@ -52,6 +52,7 @@ const App = () => {
         </div>
       </div>
       { admin && <Admin onClose={() => setAdmin(false)} /> }
+      <div className="admin-trigger" onClick={() => setAdmin(true)}></div>
     </div>
   );
 }
