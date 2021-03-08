@@ -1,26 +1,29 @@
 {
   "files": {
-    "main.css": "/groendakmonitor/static/css/main.6a20171f.chunk.css",
-    "main.js": "/groendakmonitor/static/js/main.e3e089cf.chunk.js",
-    "main.js.map": "/groendakmonitor/static/js/main.e3e089cf.chunk.js.map",
-    "runtime-main.js": "/groendakmonitor/static/js/runtime-main.e31109c8.js",
-    "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.e31109c8.js.map",
-    "static/js/2.50e66f56.chunk.js": "/groendakmonitor/static/js/2.50e66f56.chunk.js",
-    "static/js/2.50e66f56.chunk.js.map": "/groendakmonitor/static/js/2.50e66f56.chunk.js.map",
-    "static/js/3.0bc6aa97.chunk.js": "/groendakmonitor/static/js/3.0bc6aa97.chunk.js",
-    "static/js/3.0bc6aa97.chunk.js.map": "/groendakmonitor/static/js/3.0bc6aa97.chunk.js.map",
+    "main.css": "/groendakmonitor/static/css/main.3ca8d260.chunk.css",
+    "main.js": "/groendakmonitor/static/js/main.a388f5c2.chunk.js",
+    "main.js.map": "/groendakmonitor/static/js/main.a388f5c2.chunk.js.map",
+    "runtime-main.js": "/groendakmonitor/static/js/runtime-main.0d736862.js",
+    "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.0d736862.js.map",
+    "static/css/2.6c0f60ba.chunk.css": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.f5f4f28a.chunk.js": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js",
+    "static/js/2.f5f4f28a.chunk.js.map": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js.map",
+    "static/js/3.6e191e56.chunk.js": "/groendakmonitor/static/js/3.6e191e56.chunk.js",
+    "static/js/3.6e191e56.chunk.js.map": "/groendakmonitor/static/js/3.6e191e56.chunk.js.map",
     "index.html": "/groendakmonitor/index.html",
-    "static/css/main.6a20171f.chunk.css.map": "/groendakmonitor/static/css/main.6a20171f.chunk.css.map",
-    "static/js/2.50e66f56.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.50e66f56.chunk.js.LICENSE.txt",
+    "static/css/2.6c0f60ba.chunk.css.map": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css.map",
+    "static/css/main.3ca8d260.chunk.css.map": "/groendakmonitor/static/css/main.3ca8d260.chunk.css.map",
+    "static/js/2.f5f4f28a.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js.LICENSE.txt",
+    "static/media/app.scss": "/groendakmonitor/static/media/Green-moss-forest-floor-leaves-ferns.81155be8.jpg",
     "static/media/groendak.8ad2a181.jpg": "/groendakmonitor/static/media/groendak.8ad2a181.jpg",
-    "static/media/leaf.61e4fa80.svg": "/groendakmonitor/static/media/leaf.61e4fa80.svg",
     "static/media/loading.d131c503.svg": "/groendakmonitor/static/media/loading.d131c503.svg",
     "static/media/weather.scss": "/groendakmonitor/static/media/weather_icon_thunder.84842da1.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.e31109c8.js",
-    "static/js/2.50e66f56.chunk.js",
-    "static/css/main.6a20171f.chunk.css",
-    "static/js/main.e3e089cf.chunk.js"
+    "static/js/runtime-main.0d736862.js",
+    "static/css/2.6c0f60ba.chunk.css",
+    "static/js/2.f5f4f28a.chunk.js",
+    "static/css/main.3ca8d260.chunk.css",
+    "static/js/main.a388f5c2.chunk.js"
   ]
 }
