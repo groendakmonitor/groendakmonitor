@@ -6,6 +6,8 @@ import Saturation from '../dashboard/Saturation';
 import Admin from 'components/admin/Admin';
 import useKey from "@rooks/use-key";
 import './styles/app.scss';
+import RoofTemperature from 'components/dashboard/RoofTemperature';
+import Biodiversity from 'components/dashboard/Biodiversity';
 
 const App = () => {
   const [admin, setAdmin] = useState(false)
@@ -19,27 +21,16 @@ const App = () => {
       <div className="main-content container d-flex flex-column px-4">
         <div className="row">
           <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
-            <WaterSaved />
-          </div>
-          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
-            <div className="widget">
-              <div className="widget-header">
-                Besparing energie
-              </div>
-              <div className="widget-body">
-              </div>
-            </div>
-          </div>
-          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
-            <div className="widget widget-tile">
-              <div className="widget-header">
-                Isolatie
-              </div>
-              <div className="widget-body"></div>
-            </div>
-          </div>
-          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
             <Saturation />
+          </div>
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
+            <RoofTemperature />
+          </div>
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
+            <Biodiversity />
+          </div>
+          <div className="col-xs-12 col-md-6 col-lg-3 mb-4">
+            <WaterSaved />
           </div>
         </div>
         <div className="row">

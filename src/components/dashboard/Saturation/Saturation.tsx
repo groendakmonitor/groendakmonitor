@@ -20,7 +20,13 @@ const Saturation = () => {
         <span className="title">Verzadiging</span>
       </div>
       <div className="widget-body text-larger">
-        {!isNaN(saturation) && <CircularProgressbar className="saturation-chart" value={saturation} text={`${saturation.toFixed(1)}%`} />}
+        {!isNaN(saturation) && (
+          <CircularProgressbar 
+            className="saturation-chart" 
+            value={saturation} 
+            text={`${saturation.toFixed(1)}%`} 
+          />
+        )}
       </div>
     </Widget>
   )

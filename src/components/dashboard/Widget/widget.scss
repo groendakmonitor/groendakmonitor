@@ -1,15 +1,21 @@
 .widget {
   background-color: #fff;
-  border-radius: 6px;
+  border-radius: 10px;
   height: 100%;
   position: relative;
+  background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+
   
   .widget-header {
     padding: 1rem 1.35rem;
-    background-color: rgba(33,40,50,.03);
+    background-color: #FFFFFF73;
     border-bottom: 1px solid rgba(33,40,50,.125);
-    color: #68ae0c;
-    font-size: larger;
+    border-radius: 10px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    color: #000000;
+    font-size: 25px;
     font-weight: 500;
   }
   

@@ -3,12 +3,13 @@ import { ReactComponent as Spinner } from 'assets/images/loading.svg';
 import './widget.scss'
 
 interface Props {
-  loading?: boolean
+  loading?: boolean;
+  className?: string;
 }
 
-const Widget = ({ children, loading }: PropsWithChildren<Props>) => {
+const Widget = ({ children, loading, className }: PropsWithChildren<Props>) => {
   return (
-    <div className="widget">
+    <div className={`widget ${className ?? ''}`}>
       {children}
       {loading && (
         <div className="widget-loading">

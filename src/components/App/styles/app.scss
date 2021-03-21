@@ -1,26 +1,12 @@
+@import "./../../../assets/fonts/Quicksand-VariableFont_wght.ttf";
+
 .app {
-  // background: #68ae0c;
+  font-family: Quicksand, 'Open Sans', sans-serif;
   background: #d2d7df;
-  background-image: url(./../../../assets/images/Green-moss-forest-floor-leaves-ferns.jpg);
   background-size: cover;
   padding-top: 30px;
   height: 100vh;
 
-  &::before {
-    // Top banner
-    content: '';
-    display: block;
-    height: 20%;
-    width: 100%;
-    top: 0;
-    position: fixed;
-    // background: rgb(60,85,27);
-    // background: linear-gradient(219deg, rgba(60,85,27,1) 0%, rgba(104,174,0,1) 100%);
-
-    opacity: 0.8;
-    background: rgb(81,155,206);
-    background: linear-gradient(219deg, rgba(81,155,206,1) 0%, rgba(104,174,0,1) 100%);
-  }
 
   .main-content {
 
