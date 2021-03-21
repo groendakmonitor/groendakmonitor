@@ -1,17 +1,15 @@
-import Widget from "../Widget";
+import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import { ReactComponent as Bee } from 'assets/images/bee.svg';
-import 'react-circular-progressbar/dist/styles.css';
-import './bidiversity.scss';
-import WidgetBody from "../Widget/WidgetBody";
+import './biodiversity.scss';
 
 const Biodiversity = () => {
 
 
   return (
     <Widget className="biodiversity">
-      <div className="widget-header">
+      <WidgetHeader>
         <span className="title">Biodiversiteit</span>
-      </div>
+      </WidgetHeader>
       <WidgetBody>
         <div className="row">
           <div className="col-6">

@@ -1,8 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTint, faBath } from '@fortawesome/fontawesome-free-solid'
 import { useWaterStore } from "../../../store/store";
-import Widget from "../Widget";
+import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 
 const LITERS_IN_BATHTUB = 80;
 
@@ -27,12 +25,12 @@ const WaterSaved = () => {
 
   return (
     <Widget loading={loading}>
-      <div className="widget-header">
+      <WidgetHeader>
         <span className="title">Opgevangen water</span>
-      </div>
-      <div className="widget-body display-4 water-saved text-center">
+      </WidgetHeader>
+      <WidgetBody>
           {diff.toFixed(1)}L
-      </div>
+      </WidgetBody>
     </Widget>
   )
 }

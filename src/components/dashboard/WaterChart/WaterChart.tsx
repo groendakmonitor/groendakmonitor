@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LineChart from "./LineChart";
-import Widget from "../Widget";
+import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 
 const WaterChart = () => {
   const [loading, setLoading] = useState(true);
@@ -12,14 +12,14 @@ const WaterChart = () => {
 
   return (
     <Widget loading={loading}>
-      <div className="widget-header">
+      <WidgetHeader>
         <span className="title">Waterbalans</span>
-      </div>
-      <div className="widget-body widget-chart-container">
+      </WidgetHeader>
+      <WidgetBody>
         <div id="main-chart">
           <LineChart />
         </div>
-      </div>
+      </WidgetBody>
     </Widget>
   )
 }

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { WeatherResponse } from "../../../models/weather";
-import Widget from "../Widget";
-import WidgetBody from "../Widget/WidgetBody";
+import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import './styles/weather.scss';
 
 const Weather = () => {
@@ -37,14 +36,14 @@ const Weather = () => {
   
   return (
     <Widget className="weather">
-      <div className="widget-header d-flex justify-content-between">
+      <WidgetHeader className=" d-flex justify-content-between">
         <div className="title">
           { data?.name } 
         </div>
         <div className="subtitle">
           {formattedDate}
         </div>
-      </div>
+      </WidgetHeader>
       <WidgetBody className="container">
         <div className="box p-3">
           <div className="row">
