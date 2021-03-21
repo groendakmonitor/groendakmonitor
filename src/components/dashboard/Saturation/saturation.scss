@@ -3,6 +3,9 @@
 .saturation-chart {
   height: 124px;
 
+  .CircularProgressbar-trail {
+    stroke: white;
+  }
   
   .CircularProgressbar-path {
     stroke: $color-primary;

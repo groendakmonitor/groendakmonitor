@@ -1,48 +1,63 @@
-.weather_icon {
-  width: 100%;
-  padding-bottom: 100%;
-  background-size: 100%;
-}
+.weather {
+  .box {
+    background: #1AABAC45 0% 0% no-repeat padding-box;
+    border-radius: 10px;
+  }
 
-.weather_cloud_slight_rain {
-  background-image: url('images/weather_icon_cloud_slight_rain.svg');
-}
+  .details {
+    font-size: smaller;
+  }
 
-.weather_full_sun {
-  background-image: url('images/weather_icon_full_sun.svg');
-}
+  .weather_icon {
+    width: 100%;
+    padding-bottom: 100%;
+    background-size: 100%;
+  }
 
-.weather_snow {
-  background-image: url('images/weather_icon_snow.svg');
-}
+  .weather_cloud_slight_rain {
+    background-image: url('images/weather_icon_cloud_slight_rain.svg');
+  }
 
-.weather_few_clouds {
-  background-image: url('images/weather_icon_few_clouds.svg');
-}
+  .weather_full_sun {
+    background-image: url('images/weather_icon_full_sun.svg');
+  }
 
-.weather_night {
-  background-image: url('images/weather_icon_night.svg');
-}
+  .weather_snow {
+    background-image: url('images/weather_icon_snow.svg');
+  }
 
-.weather_sun_rain_clouds {
-  background-image: url('images/weather_icon_sun_rain_clouds.svg');
-}
+  .weather_few_clouds {
+    background-image: url('images/weather_icon_few_clouds.svg');
+  }
 
-.weather_full_clouds {
-  background-image: url('images/weather_icon_full_clouds.svg');
-}
+  .weather_night {
+    background-image: url('images/weather_icon_night.svg');
+  }
 
-.weather_rainy {
-  background-image: url('images/weather_icon_rainy.svg');
-}
+  .weather_sun_rain_clouds {
+    background-image: url('images/weather_icon_sun_rain_clouds.svg');
+  }
 
-.weather_thunder {
-  background-image: url('images/weather_icon_thunder.svg');
-}
+  .weather_full_clouds {
+    background-image: url('images/weather_icon_full_clouds.svg');
+  }
 
-.weather-today {
-}
+  .weather_rainy {
+    background-image: url('images/weather_icon_rainy.svg');
+  }
 
-.temperature {
-  font-size: xx-large;
+  .weather_thunder {
+    background-image: url('images/weather_icon_thunder.svg');
+  }
+
+  .weather-today {
+  }
+
+  .temperature {
+    font-size: xx-large;
+  }
+
+  .news-title {
+    background: #FFFFFF73 0% 0% no-repeat padding-box;
+  }
 }

@@ -15,14 +15,14 @@
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
     color: #000000;
-    font-size: 25px;
-    font-weight: 500;
+    
+    .title {
+      font-size: 25px;
+      font-weight: 500;
+    }
   }
   
   .widget-body {
-    padding: 24px 20px;
-    // color: #4e4e4e;
-    color: #3385bb;
   }
 
   .widget-loading {

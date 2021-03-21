@@ -1,14 +1,7 @@
 @import "../../../scss/bootstrap.scss";
 
-.saturation-chart {
-  height: 124px;
-
-  
-  .CircularProgressbar-path {
-    stroke: $color-primary;
+.biodiversity {
+  .bee {
+    width: 100%;
   }
-
- .CircularProgressbar-text {
-   fill: $color-text-large;
-  }  
 }

@@ -2,6 +2,7 @@ import Widget from "../Widget";
 import { ReactComponent as RoofNormal } from 'assets/images/roof-normal.svg';
 import { ReactComponent as RoofGreen } from 'assets/images/roof-green.svg';
 
+import WidgetBody from "../Widget/WidgetBody";
 import './roofTemperature.scss';
 
 const RoofTemperature = () => {
@@ -11,16 +12,16 @@ const RoofTemperature = () => {
       <div className="widget-header">
         <span className="title">Temperatuur</span>
       </div>
-      <div className="widget-body text-larger container">
+      <WidgetBody className="container">
         <div className="row">
           <div className="col-6">
             <RoofNormal className="roof"/>
           </div>
           <div className="col-6">
-            <RoofGreen className="roof" />
+            <RoofGreen className="roof green" />
           </div>
         </div>
-      </div>
+      </WidgetBody>
     </Widget>
   )
 }

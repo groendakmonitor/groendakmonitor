@@ -1,5 +1,7 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { WeatherResponse } from "../../../models/weather";
+import Widget from "../Widget";
+import WidgetBody from "../Widget/WidgetBody";
 import './styles/weather.scss';
 
 const Weather = () => {
@@ -31,50 +33,66 @@ const Weather = () => {
   // 50d.png 
   if (!data) return null;
   
+  const formattedDate = new Date().toLocaleDateString();
+  
   return (
-    <div className={`widget widget-tile be-loading`}>
-      <div className="widget-header">
+    <Widget className="weather">
+      <div className="widget-header d-flex justify-content-between">
         <div className="title">
           { data?.name } 
         </div>
-      </div>
-      <div className="widget-container container-fluid">
-        <div className="row">
-          <div className="col-sm-4 text-center">
-            <div className="weather_icon weather_few_clouds"/>
-            <div className="weather-today">
-             ({data.weather[0].description})
-            </div>
-          </div>
-          <div className="col-sm-4 d-flex flex-column justify-content-center">
-            <div className="temperature">
-              {data.main.temp.toFixed(1)}°
-            </div>
-          </div>
-          <div className="col-sm-4">
-            hum: {data.main.humidity}%
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-sm-3 text-center">
-            <div className="weather_icon weather_full_sun"/>
-            {addDay(1).toLocaleDateString()}
-          </div>
-          <div className="col-sm-3 text-center">
-            <div className="weather_icon weather_sun_rain_clouds"/>
-            {addDay(2).toLocaleDateString()}
-          </div>
-          <div className="col-sm-3 text-center">
-            <div className="weather_icon weather_thunder"/>
-            {addDay(3).toLocaleDateString()}
-          </div>
-          <div className="col-sm-3 text-center">
-            <div className="weather_icon weather_snow"/>
-            {addDay(4).toLocaleDateString()}
-          </div>
+        <div className="subtitle">
+          {formattedDate}
         </div>
       </div>
-    </div>
+      <WidgetBody className="container">
+        <div className="box p-3">
+          <div className="row">
+            <div className="col-3">
+              <div className="weather_icon weather_few_clouds"/>
+            </div>
+            <div className="col-3">
+              <div className="temperature">
+                {data.main.temp.toFixed(1)}°
+              </div>
+            </div>
+            <div className="col-3 details">
+              <div>Neerslag</div>
+              <div>Kans</div>
+              <div>Temperatuur</div>
+            </div>
+            <div className="col-3 details text-right">
+              <div>{data.main.humidity}%</div>
+              <div>{data.main.humidity}%</div>
+              <div>{data.main.humidity}%</div>
+            </div>
+          </div>
+        </div>
+        <div className="row mt-3 no-gutters">
+          <div className="col-sm-4 text-center pr-2">
+            <div className="box h-100">
+              <div className="weather_icon weather_full_sun"/>
+              {addDay(1).toLocaleDateString()}
+            </div>
+          </div>
+          <div className="col-sm-4 text-center px-2">
+            <div className="box h-100">
+              <div className="weather_icon weather_sun_rain_clouds"/>
+              {addDay(2).toLocaleDateString()}
+              </div>
+            </div>
+          <div className="col-sm-4 text-center pl-2">
+            <div className="box h-100">
+              <div className="weather_icon weather_thunder"/>
+              {addDay(3).toLocaleDateString()}
+            </div>
+          </div>
+        </div>
+        <div className="row mt-3 news-title py-2 px-3">
+          Updates
+        </div>
+      </WidgetBody>
+    </Widget>
   )
 }
 

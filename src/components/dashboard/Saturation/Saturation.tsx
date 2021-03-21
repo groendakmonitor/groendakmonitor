@@ -2,6 +2,7 @@ import React, { useMemo } from "react";
 import { useWaterStore } from "../../../store/store";
 import Widget from "../Widget";
 import { CircularProgressbar } from 'react-circular-progressbar';
+import WidgetBody from "../Widget/WidgetBody";
 import 'react-circular-progressbar/dist/styles.css';
 import './saturation.scss';
 
@@ -19,7 +20,7 @@ const Saturation = () => {
       <div className="widget-header">
         <span className="title">Verzadiging</span>
       </div>
-      <div className="widget-body text-larger">
+      <WidgetBody>
         {!isNaN(saturation) && (
           <CircularProgressbar 
             className="saturation-chart" 
@@ -27,7 +28,7 @@ const Saturation = () => {
             text={`${saturation.toFixed(1)}%`} 
           />
         )}
-      </div>
+      </WidgetBody>
     </Widget>
   )
 }

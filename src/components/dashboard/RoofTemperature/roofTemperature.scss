@@ -3,5 +3,10 @@
 .roof-temperature {
   .roof {
     width: 100%;
+
+    &.green g {
+      fill: $color-primary;
+      stroke: $color-primary;
+    }
   }
 }
