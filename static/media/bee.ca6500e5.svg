@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 140.8 116.1" style="enable-background:new 0 0 140.8 116.1;" xml:space="preserve">
+<g>
+	<g>
+		<path style="fill:#FFEF1D;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M69.3,114.8
+			c5.8-5.6,11.1-11.8,15.6-18.5H53.4C59.7,106,69.3,114.8,69.3,114.8z"/>
+		<path style="fill:#FFEF1D;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M94.6,75.9
+			c0.4-10.1-8.1-20-8.1-20H51.7c0,0-8.1,9.9-7.7,19.9L94.6,75.9l-50.7-0.1v0.1"/>
+		<path style="fill:#FFEF1D;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M84.9,96.3"/>
+		<path style="fill:#FFEF1D;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M53.4,96.3"/>
+		<path style="fill:#231F20;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M44,75.9L94.7,76
+			L44,75.9L44,75.9c0.4,10.2,3,10.6,9.4,20.3c0,0.1,0.1,0.1,0.1,0.2H85c0-0.1,0.1-0.1,0.1-0.2c6.3-9.7,9.2-10.2,9.6-20.2"/>
+	</g>
+	<path style="fill:#FFEF1D;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="
+		M57.3,33.1c0,0,1.1-13.5,11.7-13.5s11.9,13.5,11.9,13.5H57.3z"/>
+	<path id="Path_113" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M74.3,19.7
+		c0,0,0.6-6.4,4.6-10.8S90.3,2,90.3,2"/>
+	<path id="Path_114" style="fill:none;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M63.6,19.7
+		c0,0-0.6-6.4-4.6-10.8S47.6,2,47.6,2"/>
+	<g  class="body" transform="translate(47.519 29.507)">
+		<path d="M12.6,2H31c6.9,0,12.6,5.6,12.6,12.6l0,0c0,6.9-5.6,12.6-12.6,12.6H12.6C5.6,27.1,0,21.5,0,14.6l0,0C0,7.6,5.6,2,12.6,2z"
+			/>
+		<path style="stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="M12.6,3H31
+			c6.4,0,11.6,5.2,11.6,11.6l0,0c0,6.4-5.2,11.6-11.6,11.6H12.6C6.2,26.1,1,20.9,1,14.6l0,0C1,8.2,6.2,3,12.6,3z"/>
+	</g>
+	<path id="Path_108" style="fill:#FFFFFF99;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="
+		M68.6,55.7c0,0-40,0.9-44.7-0.8S14.2,47.6,13.1,40c-0.6-3.8,1.6-10.7,7.2-14.6s12.6-3.8,17-0.6C41.3,27.8,68.6,55.7,68.6,55.7z"/>
+	<path id="Path_109" style="fill:#FFFFFF99;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="
+		M72.4,55.6c0,0,39.9,0.9,44.5-0.8s9.7-7.3,10.8-14.8c0.6-3.8-1.6-10.6-7.2-14.5s-12.6-3.8-16.9-0.6C99.6,27.8,72.4,55.6,72.4,55.6z
+		"/>
+	<path id="Path_110" style="fill:#FFFFFF99;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="
+		M64.1,55.9c0,0-12.2,16.4-15.9,19.4s-7.8,4.7-12.1,2S30,70,30.7,64.5s7-8.7,7-8.7h26.4V55.9z"/>
+	<path id="Path_111" style="fill:#FFFFFF99;stroke:#000000;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;" d="
+		M76.4,55.9c0,0,12.2,16.4,15.9,19.4s7.8,4.7,12.1,2s6.1-7.3,5.4-12.8s-6.9-8.7-6.9-8.7H76.4V55.9z"/>
+</g>
+</svg>
