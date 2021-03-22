@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/groendakmonitor/static/css/main.809f9eb0.chunk.css",
-    "main.js": "/groendakmonitor/static/js/main.43adc615.chunk.js",
-    "main.js.map": "/groendakmonitor/static/js/main.43adc615.chunk.js.map",
+    "main.css": "/groendakmonitor/static/css/main.1ada9ab4.chunk.css",
+    "main.js": "/groendakmonitor/static/js/main.59bbb0f3.chunk.js",
+    "main.js.map": "/groendakmonitor/static/js/main.59bbb0f3.chunk.js.map",
     "runtime-main.js": "/groendakmonitor/static/js/runtime-main.3990e0a4.js",
     "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.3990e0a4.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css",
-    "static/js/2.f5f4f28a.chunk.js": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js",
-    "static/js/2.f5f4f28a.chunk.js.map": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js.map",
+    "static/js/2.671a3509.chunk.js": "/groendakmonitor/static/js/2.671a3509.chunk.js",
+    "static/js/2.671a3509.chunk.js.map": "/groendakmonitor/static/js/2.671a3509.chunk.js.map",
     "static/js/3.3f04a7f0.chunk.js": "/groendakmonitor/static/js/3.3f04a7f0.chunk.js",
     "static/js/3.3f04a7f0.chunk.js.map": "/groendakmonitor/static/js/3.3f04a7f0.chunk.js.map",
     "index.html": "/groendakmonitor/index.html",
     "static/css/2.6c0f60ba.chunk.css.map": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css.map",
-    "static/css/main.809f9eb0.chunk.css.map": "/groendakmonitor/static/css/main.809f9eb0.chunk.css.map",
-    "static/js/2.f5f4f28a.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.f5f4f28a.chunk.js.LICENSE.txt",
-    "static/media/bee.febedeb1.svg": "/groendakmonitor/static/media/bee.febedeb1.svg",
+    "static/css/main.1ada9ab4.chunk.css.map": "/groendakmonitor/static/css/main.1ada9ab4.chunk.css.map",
+    "static/js/2.671a3509.chunk.js.LICENSE.txt": "/groendakmonitor/static/js/2.671a3509.chunk.js.LICENSE.txt",
+    "static/media/bee.dd739a6f.svg": "/groendakmonitor/static/media/bee.dd739a6f.svg",
     "static/media/groendak.8ad2a181.jpg": "/groendakmonitor/static/media/groendak.8ad2a181.jpg",
     "static/media/loading.d131c503.svg": "/groendakmonitor/static/media/loading.d131c503.svg",
     "static/media/roof-green.7b908a6d.svg": "/groendakmonitor/static/media/roof-green.7b908a6d.svg",
@@ -24,8 +24,8 @@
   "entrypoints": [
     "static/js/runtime-main.3990e0a4.js",
     "static/css/2.6c0f60ba.chunk.css",
-    "static/js/2.f5f4f28a.chunk.js",
-    "static/css/main.809f9eb0.chunk.css",
-    "static/js/main.43adc615.chunk.js"
+    "static/js/2.671a3509.chunk.js",
+    "static/css/main.1ada9ab4.chunk.css",
+    "static/js/main.59bbb0f3.chunk.js"
   ]
 }
