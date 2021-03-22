@@ -3,5 +3,9 @@
 .biodiversity {
   .bee {
     width: 100%;
+    
+    .body {
+      fill: $color-darker;
+    }
   }
 }
