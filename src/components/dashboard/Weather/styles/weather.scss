@@ -1,6 +1,8 @@
+@import "../../../../scss/bootstrap.scss";
+
 .weather {
   .box {
-    background: #1AABAC45 0% 0% no-repeat padding-box;
+    background: $color-darker 0% 0% no-repeat padding-box;
     border-radius: 10px;
   }
 
@@ -55,6 +57,7 @@
 
   .temperature {
     font-size: xx-large;
+    color: $color-text-large;
   }
 
   .news-title {

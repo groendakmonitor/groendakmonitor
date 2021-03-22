@@ -1,3 +1,5 @@
+@import "../../../scss/bootstrap.scss";
+
 .widget {
   background-color: #fff;
   border-radius: 10px;
@@ -14,11 +16,11 @@
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    color: #000000;
     
     .title {
       font-size: 25px;
       font-weight: 500;
+      color: $color-text-large;
     }
   }
   

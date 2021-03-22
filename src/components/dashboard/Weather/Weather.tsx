@@ -51,7 +51,7 @@ const Weather = () => {
               <div className="weather_icon weather_few_clouds"/>
             </div>
             <div className="col-3">
-              <div className="temperature">
+              <div className="temperature font-weight-bold">
                 {data.main.temp.toFixed(1)}°
               </div>
             </div>
