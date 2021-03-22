@@ -6,7 +6,7 @@ interface Props {
 
 const WidgetHeader = ({ children, className }: PropsWithChildren<Props>) => {
   return (
-    <div className={`widget-header ${className ?? ''}`}>
+    <div className={`widget-header py-2 px-3 ${className ?? ''}`}>
       {children}
     </div>
   )
