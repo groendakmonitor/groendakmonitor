@@ -1,8 +1,8 @@
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
-import { ReactComponent as RoofNormal } from 'assets/images/roof-normal.svg';
-import { ReactComponent as RoofGreen } from 'assets/images/roof-green.svg';
+import { ReactComponent as RoofNormal } from './styles/images/roof-normal.svg';
+import { ReactComponent as RoofGreen } from './styles/images/roof-green.svg';
 
-import './roofTemperature.scss';
+import './styles/roofTemperature.scss';
 
 const RoofTemperature = () => {
 

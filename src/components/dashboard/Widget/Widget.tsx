@@ -1,6 +1,6 @@
 import { PropsWithChildren } from 'react'
-import { ReactComponent as Spinner } from 'assets/images/loading.svg';
-import './widget.scss'
+import { ReactComponent as Spinner } from './styles/images/loading.svg';
+import './styles/widget.scss'
 
 interface Props {
   loading?: boolean;
