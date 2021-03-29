@@ -1,6 +1,6 @@
 import { CustomerListData } from "models/customer";
 import React from "react";
-import { useWaterStore } from "store/store";
+import { useCustomerStore } from "store/store";
 import CustomerRow from "./CustomerRow";
 import './styles/customerList.scss';
 
@@ -11,8 +11,8 @@ interface Props {
 
 const CustomerList = (props: Props) => {
   const { data, onLogout } = props;
-  const setCustomerId = useWaterStore((data) => data.setCustomerId);
-  const customerId = useWaterStore((data) => data.customerId);
+  const fetchCustomerData = useCustomerStore((data) => data.fetchCustomerData);
+  const customerId = useCustomerStore((data) => data.customerId);
 
   return (
     <>
@@ -26,7 +26,7 @@ const CustomerList = (props: Props) => {
         </thead>
         <tbody>
           {data.map((c) => 
-            <CustomerRow key={c.id} data={c} onClick={() => setCustomerId(c.id)} selected={customerId === c.id}/>
+            <CustomerRow key={c.id} data={c} onClick={() => fetchCustomerData(c.id)} selected={customerId === c.id}/>
           )}
         </tbody>  
       </table>

@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react'
 import { Line } from '@reactchartjs/react-chart.js'
-import { useWaterStore } from '../../../store/store'
+import { useWaterStore, useCustomerStore } from '../../../store/store'
 
 const options = {
   scales: {
@@ -42,6 +42,7 @@ interface LineData {
 
 const LineChart = () => {
   // const [data, setData] = useState<LineData>()
+  const customerId = useCustomerStore((data) => data.customerId);
   const waterData = useWaterStore((data) => data.waterData);
   const fetchWaterData = useWaterStore((data) => data.fetchWaterData);
 
@@ -83,11 +84,12 @@ const LineChart = () => {
   // }, [])
 
   useEffect(() => {
+    if (!customerId) return
     const timeout = setInterval(() => {
-      fetchWaterData()
+      fetchWaterData(customerId)
     }, 2000)
     return () => clearInterval(timeout)
-  }, [fetchWaterData])
+  }, [customerId, fetchWaterData])
 
   const data = useMemo(() => {
     const incomingData: number[] = [];

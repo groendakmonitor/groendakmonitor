@@ -3,9 +3,16 @@
 .biodiversity {
   .bee {
     width: 100%;
+    animation: myOrbit 14s linear infinite;
     
     .body {
       fill: $color-darker;
     }
   }
+}
+
+@keyframes myOrbit {
+  0% { transform: rotate(360deg) translateX(50px) ; }
+  50% { transform: rotate(180deg) translateX(50px) ; }
+  100%   { transform: rotate(360deg) translateX(50px) ; }
 }

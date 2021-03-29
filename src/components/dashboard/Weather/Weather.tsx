@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useCustomerStore } from "store/store";
 import { WeatherResponse } from "../../../models/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import './styles/weather.scss';
@@ -6,6 +7,18 @@ import './styles/weather.scss';
 const Weather = () => {
   // const [loading, setLoading] = useState(true);
   const [data, setData] = useState<WeatherResponse>();
+
+  const customerId = useCustomerStore((data) => data.customerId);
+  const customerData = useCustomerStore((data) => data.customerData);
+  const fetchCustomerData = useCustomerStore((data) => data.fetchCustomerData);
+
+  useEffect(() => {
+    if (customerId && !customerData) {
+      fetchCustomerData(customerId)
+      //pro.openweathermap.org/data/2.5/forecast/hourly?lat={lat}&lon={lon}&appid=d86522ec31d44b5e4bf1a78130cf0c87
+    }
+  }, [customerData, customerId, fetchCustomerData])
+
   useEffect(() => {
     // const stopLoading = () => setLoading(false);
     // const timeout = setTimeout(stopLoading, 1000);

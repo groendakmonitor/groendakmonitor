@@ -1,33 +1,21 @@
+import { CustomerData } from "models/customer";
 import create from "zustand";
 import { WaterResponse } from "../models/water";
 
 type WaterStore = {
-  customerId?: number; // maybe this id should not be here
   waterData: WaterResponse[],
-  setCustomerId: (customerId: number) => void;
-  fetchWaterData(): void,
+  fetchWaterData(customerId: number): void,
   getTotalIncoming(): number,
   getTotalOutgoing(): number,
 }
 
-const determineInitialCustomerId = () => {
-  const fromStorage = localStorage.getItem("customerId");
-  if (!fromStorage) return undefined;
-  return parseInt(fromStorage)
-}
+
 
 export const useWaterStore = create<WaterStore>(
   (set, get): WaterStore => ({
-    customerId: determineInitialCustomerId(),
     waterData: [],
-    
-    setCustomerId: (customerId: number) => {
-      localStorage.setItem("customerId", customerId.toString());
-      set({ customerId });
-    },
 
-    fetchWaterData(): void {
-      const { customerId } = get();
+    fetchWaterData(customerId: number): void {
       if (customerId !== undefined) {
         fetch(`${process.env.REACT_APP_API_URL}/water/${customerId}`)
           .then<WaterResponse[]>(res => res.json())
@@ -55,3 +43,49 @@ export const useWaterStore = create<WaterStore>(
   })
 )
 
+const determineInitialCustomerId = () => {
+  const fromStorage = localStorage.getItem("customerId");
+  if (!fromStorage) return undefined;
+  return parseInt(fromStorage)
+}
+
+type CustomerStore = {
+  customerId?: number;
+  customerData?: CustomerData,
+  fetchCustomerData: (customerId: number) => void;
+}
+
+
+export const useCustomerStore = create<CustomerStore>(
+  (set, get): CustomerStore => ({
+    customerId: determineInitialCustomerId(),
+    customerData: undefined,
+    
+    fetchCustomerData: (customerId: number) => {
+      localStorage.setItem("customerId", customerId.toString());
+      set({ customerId });
+
+      if (customerId !== undefined) {
+        fetch(`${process.env.REACT_APP_API_URL}/customer/${customerId}`)
+          .then<CustomerData>(res => res.json())
+          .then((customerData) => {
+            set({
+              customerData
+            })
+          })
+      }
+    },
+
+    
+  })
+)
+// if (customerId !== undefined) {
+//   fetch(`${process.env.REACT_APP_API_URL}/customers/${customerId}`)
+//     .then<CustomerData[]>(res => res.json())
+//     .then((data) => {
+//       console.log(data)
+//       // set({
+//       //   waterData: data
+//       // })
+//     })
+// }
