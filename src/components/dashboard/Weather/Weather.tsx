@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useCustomerStore } from "store/store";
 import { WeatherResponse } from "../../../models/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
+import Updates from "./Updates";
 import './styles/weather.scss';
 
 const Weather = () => {
@@ -16,6 +17,7 @@ const Weather = () => {
     if (customerId && !customerData) {
       fetchCustomerData(customerId)
       //pro.openweathermap.org/data/2.5/forecast/hourly?lat={lat}&lon={lon}&appid=d86522ec31d44b5e4bf1a78130cf0c87
+      //https://openweathermap.org/api/hourly-forecast#geo5
     }
   }, [customerData, customerId, fetchCustomerData])
 
@@ -100,8 +102,11 @@ const Weather = () => {
             </div>
           </div>
         </div>
-        <div className="row mt-3 news-title py-2 px-3">
-          Updates
+        <div className="row mt-3 ">
+          <div className="news-title py-2 px-3 w-100">
+            Updates
+          </div>      
+          <Updates />
         </div>
       </WidgetBody>
     </Widget>

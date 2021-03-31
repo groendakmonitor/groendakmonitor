@@ -1,0 +1,17 @@
+.updates {
+  list-style: none;
+  overflow: hidden;
+  height: 76px;
+  padding: 0;
+  margin: 0;
+
+  li {
+    height: 76px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+
+    transition: margin .5s ease-in-out;
+  }
+}
