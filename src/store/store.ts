@@ -17,7 +17,7 @@ export const useWaterStore = create<WaterStore>(
 
     fetchWaterData(customerId: number): void {
       if (customerId !== undefined) {
-        fetch(`${process.env.REACT_APP_API_URL}/water/${customerId}`)
+        fetch(`${process.env.REACT_APP__API_URL}/water/${customerId}`)
           .then<WaterResponse[]>(res => res.json())
           .then((data) => {
             set({
@@ -66,7 +66,7 @@ export const useCustomerStore = create<CustomerStore>(
       set({ customerId });
 
       if (customerId !== undefined) {
-        fetch(`${process.env.REACT_APP_API_URL}/customer/${customerId}`)
+        fetch(`${process.env.REACT_APP__API_URL}/customer/${customerId}`)
           .then<CustomerData>(res => res.json())
           .then((customerData) => {
             set({
@@ -80,7 +80,7 @@ export const useCustomerStore = create<CustomerStore>(
   })
 )
 // if (customerId !== undefined) {
-//   fetch(`${process.env.REACT_APP_API_URL}/customers/${customerId}`)
+//   fetch(`${process.env.REACT_APP__API_URL}/customers/${customerId}`)
 //     .then<CustomerData[]>(res => res.json())
 //     .then((data) => {
 //       console.log(data)

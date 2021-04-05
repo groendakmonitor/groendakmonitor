@@ -20,7 +20,7 @@ const Admin = ({ onClose }: Props) => {
 
   useEffect(() => {
     if (authenticated && getAuthToken()) {
-      fetch(`${process.env.REACT_APP_API_URL}/customers`, {
+      fetch(`${process.env.REACT_APP__API_URL}/customers`, {
         method: 'get',
         headers: [['Content-Type', 'application/json'], getAuthHeader()],
       })

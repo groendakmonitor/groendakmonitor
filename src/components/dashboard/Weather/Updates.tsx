@@ -8,7 +8,7 @@ const Updates = () => {
   const [currentItem, setCurrentItem] = useState(0)
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/updates`, {
+    fetch(`${process.env.REACT_APP__API_URL}/updates`, {
       method: 'get',
       headers: [['Content-Type', 'application/json']],
     })
@@ -20,7 +20,6 @@ const Updates = () => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      console.log('hi', currentItem)
       setCurrentItem((currentItem + 1) % (data?.length ?? 0))
     }, INTERVAL_TIME)
     return () => clearInterval(interval)

@@ -24,16 +24,23 @@ const Weather = () => {
     // const stopLoading = () => setLoading(false);
     // const timeout = setTimeout(stopLoading, 1000);
     // return () => clearTimeout(timeout);
-    fetch(`${process.env.PUBLIC_URL}/api/weather-current.json`)
-      .then((res) => res.json())
-      .then(json => {
-        setData(json)
-      })
-      .catch((error) => {
-        console.error('Error:', error);
-      });
 
-  }, []);
+    if (!customerData) return;
+    const [lat, lon] = customerData.location.split(',')
+    const fetchWeather = () => {
+      fetch(`${process.env.REACT_APP__OPEN_WEATHER_MAP_URL}/forecast?lat=${lat}&lon=${lon}&lang=nl&appid=${process.env.REACT_APP__OPEN_WEATHER_MAP_API}`)
+        .then((res) => res.json())
+        .then(json => {
+          console.log(json)
+          // setData(json)
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+    // setInterval(fetchWeather, 5000)
+
+  }, [customerData]);
   // 01d.png weather_icon_full_sun.svg
   // 01n.png weather_icon_night.svg
   // 02d.png weather_icon_few_clouds.svg
