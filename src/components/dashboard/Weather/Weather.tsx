@@ -4,6 +4,8 @@ import { WeatherResponse } from "../../../models/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import Updates from "./Updates";
 import './styles/weather.scss';
+import Today from "./Today";
+import Day from "./Day";
 
 const Weather = () => {
   // const [loading, setLoading] = useState(true);
@@ -28,17 +30,18 @@ const Weather = () => {
     if (!customerData) return;
     const [lat, lon] = customerData.location.split(',')
     const fetchWeather = () => {
-      fetch(`${process.env.REACT_APP__OPEN_WEATHER_MAP_URL}/forecast?lat=${lat}&lon=${lon}&lang=nl&appid=${process.env.REACT_APP__OPEN_WEATHER_MAP_API}`)
+      fetch(`${process.env.REACT_APP__OPEN_WEATHER_MAP_URL}/forecast?lat=${lat}&lon=${lon}&lang=nl&units=metric&appid=${process.env.REACT_APP__OPEN_WEATHER_MAP_API}`)
         .then((res) => res.json())
         .then(json => {
-          console.log(json)
-          // setData(json)
+          // console.log(json)
+          setData(json)
         })
         .catch((error) => {
           console.error('Error:', error);
         });
     }
-    // setInterval(fetchWeather, 5000)
+    fetchWeather();
+    // setInterval(fetchWeather, 50000)
 
   }, [customerData]);
   // 01d.png weather_icon_full_sun.svg
@@ -59,54 +62,18 @@ const Weather = () => {
     <Widget className="weather">
       <WidgetHeader className=" d-flex justify-content-between">
         <div className="title">
-          { data?.name } 
+          { data?.city.name } 
         </div>
-        <div className="subtitle">
+        <div className="subtitle d-none d-sm-block d-md-none d-lg-block ">
           {formattedDate}
         </div>
       </WidgetHeader>
       <WidgetBody className="container">
-        <div className="box p-3">
-          <div className="row">
-            <div className="col-3">
-              <div className="weather_icon weather_few_clouds"/>
-            </div>
-            <div className="col-3">
-              <div className="temperature font-weight-bold">
-                {data.main.temp.toFixed(1)}°
-              </div>
-            </div>
-            <div className="col-3 details">
-              <div>Neerslag</div>
-              <div>Kans</div>
-              <div>Temperatuur</div>
-            </div>
-            <div className="col-3 details text-right">
-              <div>{data.main.humidity}%</div>
-              <div>{data.main.humidity}%</div>
-              <div>{data.main.humidity}%</div>
-            </div>
-          </div>
-        </div>
+        <Today data={data.list[0] }/>
         <div className="row mt-3 no-gutters">
-          <div className="col-sm-4 text-center pr-2">
-            <div className="box h-100">
-              <div className="weather_icon weather_full_sun"/>
-              {addDay(1).toLocaleDateString()}
-            </div>
-          </div>
-          <div className="col-sm-4 text-center px-2">
-            <div className="box h-100">
-              <div className="weather_icon weather_sun_rain_clouds"/>
-              {addDay(2).toLocaleDateString()}
-              </div>
-            </div>
-          <div className="col-sm-4 text-center pl-2">
-            <div className="box h-100">
-              <div className="weather_icon weather_thunder"/>
-              {addDay(3).toLocaleDateString()}
-            </div>
-          </div>
+          <Day data={data.list[1]} />
+          <Day data={data.list[2]} />
+          <Day data={data.list[3]} />
         </div>
         <div className="row mt-3 ">
           <div className="news-title py-2 px-3 w-100">
@@ -120,7 +87,3 @@ const Weather = () => {
 }
 
 export default Weather;
-
-const addDay = (days: number) => {
-  return new Date(new Date().getTime() + days * 86400000);
-}

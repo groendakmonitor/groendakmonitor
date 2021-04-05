@@ -36,18 +36,24 @@ export interface Sys {
   sunset: number;
 }
 
-export interface WeatherResponse {
-  coord: Coord;
-  weather: Weather[];
-  base: string;
-  main: Main;
-  visibility: number;
-  wind: Wind;
-  clouds: Clouds;
-  dt: number;
-  sys: Sys;
-  timezone: number;
+export interface City {
   id: number;
   name: string;
+}
+
+export interface Forecast {
+  dt: number;
+  main: Main;
+  weather: Weather[];
+  clouds: Clouds;
+  wind: Wind;
+  visibility: number;
+
+}
+export interface WeatherResponse {
   cod: number;
+  message: number;
+  cnt: number;
+  list: Forecast[],
+  city: City;
 }
