@@ -16,7 +16,6 @@ const Weather = () => {
   useEffect(() => {
     if (customerId && !customerData) {
       fetchCustomerData(customerId)
-      //pro.openweathermap.org/data/2.5/forecast/hourly?lat={lat}&lon={lon}&appid=d86522ec31d44b5e4bf1a78130cf0c87
       //https://openweathermap.org/api/hourly-forecast#geo5
     }
   }, [customerData, customerId, fetchCustomerData])
