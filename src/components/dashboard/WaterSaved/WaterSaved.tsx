@@ -16,7 +16,7 @@ const WaterSaved = () => {
   const totalOutgoing = useWaterStore(store => store.getTotalOutgoing());
 
   const diff = useMemo(() => {
-    return totalOutgoing - totalIncoming;
+    return Math.max(totalOutgoing - totalIncoming, 0);
   }, [totalIncoming, totalOutgoing])
 
   const bathtubs = useMemo(()  => {
