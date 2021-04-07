@@ -1,6 +1,7 @@
-import React, { useEffect, useMemo, useState } from 'react'
+import React, { useEffect, useMemo } from 'react'
 import { Line } from '@reactchartjs/react-chart.js'
-import { useWaterStore, useCustomerStore } from '../../../store/water'
+import { useWaterStore } from 'store/water'
+import { useCustomerStore } from 'store/customer'
 
 const options = {
   scales: {
