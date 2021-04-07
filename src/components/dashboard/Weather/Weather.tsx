@@ -49,12 +49,9 @@ const Weather = () => {
   
   return (
     <Widget className="weather">
-      <WidgetHeader className=" d-flex justify-content-between">
+      <WidgetHeader>
         <div className="title">
           { data?.city.name } 
-        </div>
-        <div className="subtitle d-none d-sm-block d-md-none d-lg-block ">
-          {formattedDate}
         </div>
       </WidgetHeader>
       <WidgetBody className="container">
@@ -65,9 +62,14 @@ const Weather = () => {
           <Day data={data.list[3]} />
         </div>
         <div className="row mt-3 ">
-          <div className="news-title py-2 px-3 w-100 font-weight-bold">
-            Updates
-          </div>      
+          <div className="news-title  d-flex justify-content-between w-100">
+            <div className="py-2 px-3 font-weight-bold">
+              Updates
+            </div>    
+            <div className="subtitle pt-2 pr-2 d-none d-sm-block d-md-none d-lg-block ">
+              {formattedDate}
+            </div>  
+          </div>
           <Updates />
         </div>
       </WidgetBody>

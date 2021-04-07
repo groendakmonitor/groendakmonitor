@@ -24,7 +24,7 @@ const RoofTemperature = () => {
         <span className="title">Temperatuur</span>
       </WidgetHeader>
       <WidgetBody className="container">
-        <div className="row">
+        <div className="row mt-4">
           <div className="col-6">
             <RoofNormal className="roof"/>
             <div className="text-center">

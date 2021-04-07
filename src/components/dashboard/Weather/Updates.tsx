@@ -26,7 +26,7 @@ const Updates = () => {
   }, [currentItem, data?.length])
 
   return (
-    <ul className="updates pt-2">
+    <ul className="updates pt-2 pr-2">
       {data?.map((update, index) => (
         <li key={update.id} className="pl-3" style={ index === 0 ? { marginTop: `-${ currentItem * 77}px`} : undefined }> 
           {update.text}
