@@ -65,7 +65,7 @@ const Weather = () => {
           <Day data={data.list[3]} />
         </div>
         <div className="row mt-3 ">
-          <div className="news-title py-2 px-3 w-100">
+          <div className="news-title py-2 px-3 w-100 font-weight-bold">
             Updates
           </div>      
           <Updates />

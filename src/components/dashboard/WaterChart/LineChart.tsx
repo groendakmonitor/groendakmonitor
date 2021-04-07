@@ -30,7 +30,7 @@ const options = {
   }
 }
 
-
+const WATER_FETCH_INTERVAL = 120000; // two minutes
 interface LineData {
   labels: string[];
   datasets: { 
@@ -47,48 +47,11 @@ const LineChart = () => {
   const waterData = useWaterStore((data) => data.waterData);
   const fetchWaterData = useWaterStore((data) => data.fetchWaterData);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     fetch("https://chatter-somber-scallion.glitch.me/waterLevel")
-  //       .then<WaterResponse[]>(res => res.json())
-  //       .then(response => {          
-  //         const incomingData: number[] = [];
-  //         const outgoingData: number[] = [];
-  //         const transformedData = response.reduce<LineData>((acc, value) => {
-  //           const date = new Date(value.date);
-
-  //           // acc.labels.push(date.toLocaleTimeString());
-  //           acc.labels.push(value.date);
-  //           incomingData.push(value.incoming);
-  //           outgoingData.push(value.outgoing);
-  //           return acc;
-  //         }, {
-  //           labels: [],
-  //           datasets: [{
-  //             label: 'Inkomend water',
-  //             data: incomingData,
-  //             backgroundColor: 'rgb(129, 173, 248)',
-  //             fill: "start",
-  //           }, {
-  //             label: 'Uitgaand water',
-  //             data: outgoingData,
-  //             backgroundColor: 'rgb(66, 133, 244)',
-  //             fill: "start",
-  //           }]
-  //         });
-          
-  //         setData(transformedData)
-  //       });
-  //   }
-  //   const timeout = setInterval(fetchData, 2000)
-  //   return () => clearInterval(timeout)
-  // }, [])
-
   useEffect(() => {
     if (!customerId) return
     const timeout = setInterval(() => {
       fetchWaterData(customerId)
-    }, 2000)
+    }, WATER_FETCH_INTERVAL)
     return () => clearInterval(timeout)
   }, [customerId, fetchWaterData])
 
@@ -96,8 +59,6 @@ const LineChart = () => {
     const incomingData: number[] = [];
     const outgoingData: number[] = [];
     return waterData.reduce<LineData>((acc, value) => {
-      // const date = new Date(value.date);
-
       // acc.labels.push(date.toLocaleTimeString());
       acc.labels.push(value.date);
       incomingData.push(value.incoming);
