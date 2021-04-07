@@ -1,6 +1,6 @@
 import { CustomerListData } from "models/customer";
 import React from "react";
-import { useCustomerStore } from "store/water";
+import { useCustomerStore } from "store/customer";
 import CustomerRow from "./CustomerRow";
 import './styles/customerList.scss';
 

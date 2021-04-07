@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useCustomerStore } from "store/water";
+import { useCustomerStore } from "store/customer";
 import { useWeatherStore } from "store/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import Updates from "./Updates";
@@ -10,9 +10,6 @@ import Day from "./Day";
 const ONE_HOUR = 3600000;
 
 const Weather = () => {
-  // const [loading, setLoading] = useState(true);
-  // const [data, setData] = useState<WeatherResponse>();
-
   const customerId = useCustomerStore((data) => data.customerId);
   const customerData = useCustomerStore((data) => data.customerData);
   const fetchCustomerData = useCustomerStore((data) => data.fetchCustomerData);

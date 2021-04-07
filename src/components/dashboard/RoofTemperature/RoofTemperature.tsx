@@ -3,8 +3,10 @@ import { ReactComponent as RoofNormal } from './styles/images/roof-normal.svg';
 import { ReactComponent as RoofGreen } from './styles/images/roof-green.svg';
 
 import './styles/roofTemperature.scss';
+import { useWeatherStore } from "store/weather";
 
 const RoofTemperature = () => {
+  const data = useWeatherStore((data) => data.weatherData);
 
   return (
     <Widget className="roof-temperature">
