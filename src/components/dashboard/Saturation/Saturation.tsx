@@ -1,5 +1,5 @@
 import React, { useMemo } from "react";
-import { useWaterStore } from "../../../store/store";
+import { useWaterStore } from "../../../store/water";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';

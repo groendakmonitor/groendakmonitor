@@ -10,6 +10,12 @@
     font-size: smaller;
   }
 
+  .title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
   .weather_icon {
     width: 100%;
     padding-bottom: 100%;

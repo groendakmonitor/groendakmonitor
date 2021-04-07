@@ -1,49 +1,41 @@
-import React, { useEffect, useState } from "react";
-import { useCustomerStore } from "store/store";
-import { WeatherResponse } from "../../../models/weather";
+import React, { useEffect } from "react";
+import { useCustomerStore } from "store/water";
+import { useWeatherStore } from "store/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import Updates from "./Updates";
 import './styles/weather.scss';
 import Today from "./Today";
 import Day from "./Day";
 
+const ONE_HOUR = 3600000;
+
 const Weather = () => {
   // const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<WeatherResponse>();
+  // const [data, setData] = useState<WeatherResponse>();
 
   const customerId = useCustomerStore((data) => data.customerId);
   const customerData = useCustomerStore((data) => data.customerData);
   const fetchCustomerData = useCustomerStore((data) => data.fetchCustomerData);
 
+  const data = useWeatherStore((data) => data.weatherData);
+  const fetchWeatherData = useWeatherStore((data) => data.fetchWeatherData);
+
   useEffect(() => {
     if (customerId && !customerData) {
       fetchCustomerData(customerId)
-      //https://openweathermap.org/api/hourly-forecast#geo5
     }
   }, [customerData, customerId, fetchCustomerData])
 
   useEffect(() => {
-    // const stopLoading = () => setLoading(false);
-    // const timeout = setTimeout(stopLoading, 1000);
-    // return () => clearTimeout(timeout);
-
     if (!customerData) return;
     const [lat, lon] = customerData.location.split(',')
     const fetchWeather = () => {
-      fetch(`${process.env.REACT_APP__OPEN_WEATHER_MAP_URL}/forecast?lat=${lat}&lon=${lon}&lang=nl&units=metric&appid=${process.env.REACT_APP__OPEN_WEATHER_MAP_API}`)
-        .then((res) => res.json())
-        .then(json => {
-          // console.log(json)
-          setData(json)
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
+      fetchWeatherData(parseFloat(lat), parseFloat(lon))
     }
     fetchWeather();
-    // setInterval(fetchWeather, 50000)
+    setInterval(fetchWeather, ONE_HOUR)
 
-  }, [customerData]);
+  }, [customerData, fetchWeatherData]);
   // 01d.png weather_icon_full_sun.svg
   // 01n.png weather_icon_night.svg
   // 02d.png weather_icon_few_clouds.svg

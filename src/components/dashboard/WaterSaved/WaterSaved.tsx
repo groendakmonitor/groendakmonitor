@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { useWaterStore } from "../../../store/store";
+import { useWaterStore } from "../../../store/water";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 
 const LITERS_IN_BATHTUB = 80;
