@@ -5,11 +5,22 @@ interface Props {
   data: Forecast
 }
 
-const Day = ( {data}: Props) => {
+const DAY_NAMES = [
+  "zo",
+  "ma",
+  "di",
+  "wo",
+  "do",
+  "vr",
+  "za",
+]
 
+const Day = ( {data}: Props) => {
+  const dayName = DAY_NAMES[new Date(data.dt * 1000).getDay()]
   return (
     <div className="col-sm-4 text-center pr-2">
     <div className="box h-100 pb-2">
+      <div className="pt-2">{dayName}</div>
       <div className={`weather_icon ${iconToClassName(data.weather[0]?.icon)}`}/>
       { data.main.temp.toFixed(1)}°
     </div>

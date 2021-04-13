@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useMemo } from "react";
 import { useCustomerStore } from "store/customer";
 import { useWeatherStore } from "store/weather";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
@@ -6,6 +6,7 @@ import Updates from "./Updates";
 import './styles/weather.scss';
 import Today from "./Today";
 import Day from "./Day";
+import { Forecast } from "models/weather";
 
 const ONE_HOUR = 3600000;
 
@@ -33,20 +34,29 @@ const Weather = () => {
     setInterval(fetchWeather, ONE_HOUR)
 
   }, [customerData, fetchWeatherData]);
-  // 01d.png weather_icon_full_sun.svg
-  // 01n.png weather_icon_night.svg
-  // 02d.png weather_icon_few_clouds.svg
-  // 03d.png weather_icon_full_clouds.svg
-  // 04d.png weather_icon_cloud_slight_rain.svg
-  // 09d.png weather_icon_rainy.svg
-  // 10d.png weather_icon_sun_rain_clouds.svg
-  // 11d.png weather_icon_thunder.svg
-  // 13d.png weather_icon_snow.svg
-  // 50d.png 
+
+  // Find the forecast for noon of tomorrow and the day after that and the day after that
+  const days = useMemo(() => {
+    const result: Forecast[] = []
+    const today = new Date().toISOString().substring(0, 'XXXX-XX-XX'.length);
+    const NUM_DAYS = 3;
+
+    data?.list.every((forecast) => {
+      if (forecast.dt_txt.substring(0, 'XXXX-XX-XX'.length) === today) return true
+      if (forecast.dt_txt.endsWith("12:00:00")) {
+        result.push(forecast)
+      }
+      return result.length < NUM_DAYS // keep searching until we found both
+    })
+
+    return result
+  }, [data?.list])
+
   if (!data) return null;
   
   const formattedDate = new Date().toLocaleDateString();
-  
+
+  // const tomorrowNoon = data.list.find(foreCast)
   return (
     <Widget className="weather">
       <WidgetHeader>
@@ -57,9 +67,9 @@ const Weather = () => {
       <WidgetBody className="container">
         <Today data={data.list[0] }/>
         <div className="row mt-3 no-gutters">
-          <Day data={data.list[1]} />
-          <Day data={data.list[2]} />
-          <Day data={data.list[3]} />
+          <Day data={days[0]} />
+          <Day data={days[1]} />
+          <Day data={days[2]} />
         </div>
         <div className="row mt-3 ">
           <div className="news-title  d-flex justify-content-between w-100">

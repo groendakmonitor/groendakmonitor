@@ -48,7 +48,7 @@ export interface Forecast {
   clouds: Clouds;
   wind: Wind;
   visibility: number;
-
+  dt_txt: string;
 }
 export interface WeatherResponse {
   cod: number;
