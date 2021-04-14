@@ -1,6 +1,8 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { useWaterStore } from "../../../store/water";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
+import Odometer from "./Odometer/Odometer";
+import "./water-saved.scss"
 
 const LITERS_IN_BATHTUB = 80;
 
@@ -9,9 +11,11 @@ const WaterSaved = () => {
   useEffect(() => {
     const stopLoading = () => setLoading(false);
     const timeout = setTimeout(stopLoading, 1000);
+    
     return () => clearTimeout(timeout);
   }, []);
 
+  
   const totalIncoming = useWaterStore(store => store.getTotalIncoming());
   const totalOutgoing = useWaterStore(store => store.getTotalOutgoing());
 
@@ -30,6 +34,14 @@ const WaterSaved = () => {
       </WidgetHeader>
       <WidgetBody>
           {diff.toFixed(1)}L
+          <Odometer
+            size={42}
+            number={diff}
+            speed={500}
+            digitsBeforeDecimal={3}
+            digitsAfterDecimal={2}
+            decimalChar=","
+          />
       </WidgetBody>
     </Widget>
   )
