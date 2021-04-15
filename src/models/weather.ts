@@ -5,7 +5,6 @@ export interface Coord {
 
 export interface Weather {
   id: number;
-  main: string;
   description: string;
   icon: string;
 }
@@ -45,6 +44,7 @@ export interface Forecast {
   dt: number;
   main: Main;
   weather: Weather[];
+  pop: number;
   clouds: Clouds;
   wind: Wind;
   visibility: number;

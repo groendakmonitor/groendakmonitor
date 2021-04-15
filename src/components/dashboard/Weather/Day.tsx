@@ -18,7 +18,7 @@ const DAY_NAMES = [
 const Day = ( {data}: Props) => {
   const dayName = DAY_NAMES[new Date(data.dt * 1000).getDay()]
   return (
-    <div className="col-4 text-center pr-2">
+    <div className="col-4 text-center">
     <div className="box h-100 pb-2">
       <div className="pt-2">{dayName}</div>
       <div className={`weather_icon ${iconToClassName(data.weather[0]?.icon)}`}/>

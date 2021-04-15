@@ -66,7 +66,7 @@ const Weather = () => {
       </WidgetHeader>
       <WidgetBody className="container">
         <Today data={data.list[0] }/>
-        <div className="row mt-3 no-gutters">
+        <div className="three-days row mt-3 no-gutters">
           <Day data={days[0]} />
           <Day data={days[1]} />
           <Day data={days[2]} />

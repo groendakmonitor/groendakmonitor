@@ -13,20 +13,20 @@ const Today = ( {data}: Props) => {
         <div className="col-3 p-0">
           <div className={`weather_icon ${iconToClassName(data.weather?.[0].icon)}`}/>
         </div>
-        <div className="col-3">
+        <div className="col-3 d-flex align-items-center">
           <div className="temperature font-weight-bold">
             {data.main.temp.toFixed(1)}°
           </div>
         </div>
         <div className="col-3 details">
           <div>Neers</div>
-          <div>Kans</div>
-          <div>Temp</div>
+          <div>Wind</div>
+          <div>Min/Max</div>
         </div>
         <div className="col-3 details text-right">
-          <div>{data.main.humidity}%</div>
-          <div>{data.main.humidity}%</div>
-          <div>{data.main.humidity}%</div>
+          <div>{data.pop}%</div>
+          <div>{data.wind.speed}</div>
+          <div>{data.main.temp_min.toFixed(1)}/{data.main.temp_max.toFixed(1)}</div>
         </div>
       </div>
     </div>
