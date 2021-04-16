@@ -34,7 +34,7 @@ const WaterSaved = () => {
       <WidgetBody className="flex-grow-1">
         <div className="row no-gutters h-100">
           <div className="col-6 d-flex flex-column box">
-            <div className="flex-fill p-2">
+            <div className="flex-fill p-2 text-truncate">
               opgevangen
             </div>
             <div className="d-flex justify-content-center pb-2">
