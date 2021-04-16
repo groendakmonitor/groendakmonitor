@@ -16,9 +16,11 @@ export const useWaterStore = create<WaterStore>(
 
     fetchWaterData(customerId: number): void {
       if (customerId !== undefined) {
+        console.log('fetching water...')
         fetch(`${process.env.REACT_APP__API_URL}/water/${customerId}`)
-          .then<WaterResponse[]>(res => res.json())
-          .then((data) => {
+        .then<WaterResponse[]>(res => res.json())
+        .then((data) => {
+            console.log('fetching water done')
             set({
               waterData: data
             })

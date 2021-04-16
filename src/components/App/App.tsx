@@ -5,9 +5,9 @@ import WaterSaved from '../dashboard/WaterSaved';
 import Saturation from '../dashboard/Saturation';
 import Admin from 'components/admin/Admin';
 import useKey from "@rooks/use-key";
-import './styles/app.scss';
 import RoofTemperature from 'components/dashboard/RoofTemperature';
 import Biodiversity from 'components/dashboard/Biodiversity';
+import './styles/app.scss';
 
 const App = () => {
   const [admin, setAdmin] = useState(false)

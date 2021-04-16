@@ -49,6 +49,7 @@ const LineChart = () => {
 
   useEffect(() => {
     if (!customerId) return
+    fetchWaterData(customerId)
     const timeout = setInterval(() => {
       fetchWaterData(customerId)
     }, WATER_FETCH_INTERVAL)
@@ -67,14 +68,14 @@ const LineChart = () => {
     }, {
       labels: [],
       datasets: [{
-        label: 'Inkomend water',
-        data: incomingData,
+        label: 'Uitgaand water',
+        data: outgoingData,
         backgroundColor: 'rgb(129, 173, 248)',
         fill: "start",
       }, {
-        label: 'Uitgaand water',
-        data: outgoingData,
+        label: 'Inkomend water',
         backgroundColor: 'rgb(66, 133, 244)',
+        data: incomingData,
         fill: "start",
       }]
     });

@@ -9,6 +9,7 @@ interface Props {
   size?: number;
   decimalChar?: string;
   intermediateLastFractalDigit?: boolean
+  className?: string
 }
 
 const Odometer = ({
@@ -18,7 +19,8 @@ const Odometer = ({
     speed = 100,
     size = 72,
     decimalChar = ".",
-    intermediateLastFractalDigit = true
+    intermediateLastFractalDigit = true,
+    className = ""
   }: Props) => {
   const integerPartNumber = Math.floor(number);
   const fractionalPartNumber = number - integerPartNumber;
@@ -33,7 +35,7 @@ const Odometer = ({
   }
 
   return (
-    <div className={'odometer'} style={odometerStyle}>
+    <div className={`odometer ${className}`} style={odometerStyle}>
       <div className="integer-part">
         { integerPartChars.map((digit, i) => {
             const place = Math.pow(10, (digitsBeforeDecimal-i-1))

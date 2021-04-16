@@ -1,5 +1,6 @@
 .odometer {
   display: inline-block;
+  border-radius: 3px;
   height: 1em;
   font-family: sans-serif;
   border-radius: 5;
@@ -24,16 +25,16 @@
   .decimal-seperator {
     display: inline-block;
     height: 1em;
-    width: 1rem;
+    width: .25rem;
     position: relative;
-    top: -10px;
+    top: -.25rem;
     color: black;
     
   }
 
   .digit {
     display: inline-block;
-    width: 2rem;
+    width: 1rem;
     height: 1em;
     text-align: center;
     overflow: hidden;
@@ -46,7 +47,7 @@
 
     .digit-inner {
       color: #1e394d;
-      width: 2rem;
+      width: 1rem;
     }
   }
 }

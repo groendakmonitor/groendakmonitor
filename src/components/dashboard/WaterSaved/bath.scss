@@ -1,0 +1,25 @@
+@import "../../../scss/bootstrap.scss";
+
+.bath-meter {
+  display: flex;
+  max-height: 135px;
+  justify-content: flex-end;
+  width: 100px;
+  flex-wrap: wrap;
+}
+
+.bath {
+  position: relative;
+
+  .bath-back { 
+    fill: $color-darker;
+  }
+
+  .bath-front {
+    left: 0;
+    top: 6px;
+
+    fill: $color-primary;
+    position: absolute;
+  }
+}
