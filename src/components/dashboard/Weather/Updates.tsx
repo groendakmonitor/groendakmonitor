@@ -12,9 +12,9 @@ const Updates = () => {
       method: 'get',
       headers: [['Content-Type', 'application/json']],
     })
-    .then((response) => response.json())
+    .then<UpdateData[]>((response) => response.json())
     .then((response) => {
-      setData(response);
+      setData(response.filter(r => r.enabled));
     });
   }, [])
 
