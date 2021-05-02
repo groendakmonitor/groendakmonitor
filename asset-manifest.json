@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/groendakmonitor/static/css/main.1aee829d.chunk.css",
-    "main.js": "/groendakmonitor/static/js/main.12a54e80.chunk.js",
-    "main.js.map": "/groendakmonitor/static/js/main.12a54e80.chunk.js.map",
+    "main.js": "/groendakmonitor/static/js/main.bbbfd548.chunk.js",
+    "main.js.map": "/groendakmonitor/static/js/main.bbbfd548.chunk.js.map",
     "runtime-main.js": "/groendakmonitor/static/js/runtime-main.ca7b1a7b.js",
     "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.ca7b1a7b.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css",
@@ -27,6 +27,6 @@
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.dc22558f.chunk.js",
     "static/css/main.1aee829d.chunk.css",
-    "static/js/main.12a54e80.chunk.js"
+    "static/js/main.bbbfd548.chunk.js"
   ]
 }
