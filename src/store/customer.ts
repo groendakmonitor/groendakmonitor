@@ -11,6 +11,7 @@ type CustomerStore = {
   customerId?: number;
   customerData?: CustomerData,
   fetchCustomerData: (customerId: number) => void;
+  clear: () => void;
 }
 
 
@@ -33,5 +34,12 @@ export const useCustomerStore = create<CustomerStore>(
           })
       }
     },    
+    clear: () => {
+      localStorage.removeItem("customerId");
+      set({ 
+        customerId: undefined,
+        customerData: undefined
+      })
+    }
   })
 )

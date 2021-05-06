@@ -8,8 +8,6 @@ type WaterStore = {
   getTotalOutgoing(): number,
 }
 
-
-
 export const useWaterStore = create<WaterStore>(
   (set, get): WaterStore => ({
     waterData: [],

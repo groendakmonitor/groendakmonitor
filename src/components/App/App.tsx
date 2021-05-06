@@ -7,6 +7,8 @@ import Admin from 'components/admin/Admin';
 import useKey from "@rooks/use-key";
 import RoofTemperature from 'components/dashboard/RoofTemperature';
 import Biodiversity from 'components/dashboard/Biodiversity';
+import { useCustomerStore } from 'store/customer';
+import Login, { LogoutButton } from 'components/login/Login';
 import './styles/app.scss';
 
 const App = () => {
@@ -15,6 +17,16 @@ const App = () => {
   useKey(["~"], (a) => {
     setAdmin(a => !a)
   })
+
+  const customerId = useCustomerStore((data) => data.customerId);
+
+  if (customerId === undefined) {
+    return (
+      <div className="app d-flex pb-4 align-items-center position-relative">
+        <Login />
+      </div>
+    )
+  }
 
   return (
     <div className="app d-flex pb-4 align-items-center position-relative">
@@ -44,6 +56,7 @@ const App = () => {
       </div>
       { admin && <Admin onClose={() => setAdmin(false)} /> }
       <div className="admin-trigger" onClick={() => setAdmin(true)}></div>
+      <LogoutButton />
     </div>
   );
 }
