@@ -1,3 +1,3 @@
 ## Groendakmonitor dashboard
 
-admin: https://spassvogel.github.io/groendakmanager/
+admin: https://groendakmonitor.github.io/groendakmanager/
