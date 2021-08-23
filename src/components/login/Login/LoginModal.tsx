@@ -1,4 +1,5 @@
 
+import { setAuthToken } from "misc/authentication";
 import { useState } from "react";
 import { useCustomerStore } from "store/customer";
 import img from './styles/groendak.jpg';
@@ -28,6 +29,7 @@ const Login = () => {
         setError(response.message)
       } else {
         fetchCustomerData(response.id)
+        setAuthToken(response.token);
     }});
   }
 
