@@ -1,0 +1,19 @@
+@import "../../../scss/bootstrap.scss";
+
+.my-progress-bar {
+  .bar {
+    height: 1rem;
+    background-color: $color-darker;
+    border-radius: 12px;
+
+    .track {
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+      background-color: $color-primary;
+    }
+  }
+  
+  .label {
+    margin-top: -2px;
+  }
+}

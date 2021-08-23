@@ -1,0 +1,11 @@
+@import "../../../scss/bootstrap.scss";
+
+.season {
+  .icon {
+    background-image: url('icons/season-summer.svg');
+    background-size: cover;
+    height: 1.5rem;
+    width: 1rem;
+    flex-shrink: 0;
+  }
+}
