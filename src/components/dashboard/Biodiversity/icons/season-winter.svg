@@ -1,1 +1,24 @@
-<?xml version="1.0" ?><svg height="256px" id="SVGRoot" version="1.1" viewBox="0 0 256 256" width="256px" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"><defs id="defs5435"/><g id="layer1"><g id="g15518" transform="translate(2.9181771,-3.779692)"><path d="m 124.89151,46.713304 0,170.132776" id="path15229" style="fill:#88cdff;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="M 202.14486,87.100224 45.458781,172.16661" id="path15229-5" style="fill:#88cdff;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="M 45.496909,86.358379 202.18299,171.42476" id="path15229-5-0" style="fill:#88cdff;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="M 99.16308,61.708995 124.60974,90.906386 150.0564,62.148053" id="path15261" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 99.21085,205.23734 25.44666,-29.19739 25.44665,28.75834" id="path15261-6" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 179.62414,69.501781 -12.56235,36.636149 37.62878,7.65829" id="path15261-5" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="m 203.62146,143.17485 -38.00902,7.43875 12.18212,36.41662" id="path15261-1" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="M 75.469837,184.85399 88.032188,148.21785 50.403416,140.55956" id="path15261-8" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/><path d="M 47.323029,116.07738 85.332041,108.63862 73.149926,72.222001" id="path15261-3" style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#88cdff;stroke-width:20;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"/></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1"
+	 id="SVGRoot" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="16px" height="16px"
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#88CDFF;stroke:#4285F4;stroke-width:1.4;stroke-linecap:round;}
+	.st1{fill:none;stroke:#4285F4;stroke-width:1.4;stroke-linecap:round;}
+</style>
+<g id="layer1">
+	<g id="g15518" transform="translate(2.9181771,-3.779692)">
+		<path id="path15229" class="st0" d="M5.1,5.8v11.9"/>
+		<path id="path15229-5" class="st0" d="M10.5,8.7l-11,6"/>
+		<path id="path15229-5-0" class="st0" d="M-0.5,8.6l11,6"/>
+		<path id="path15261" class="st1" d="M3.3,6.9l1.8,2l1.8-2"/>
+		<path id="path15261-6" class="st1" d="M3.3,16.9l1.8-2l1.8,2"/>
+		<path id="path15261-5" class="st1" d="M8.9,7.4L8,10l2.6,0.5"/>
+		<path id="path15261-1" class="st1" d="M10.6,12.6l-2.7,0.5l0.9,2.5"/>
+		<path id="path15261-8" class="st1" d="M1.6,15.5l0.9-2.6l-2.6-0.5"/>
+		<path id="path15261-3" class="st1" d="M-0.4,10.7l2.7-0.5L1.4,7.6"/>
+	</g>
+</g>
+</svg>

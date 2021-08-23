@@ -3,7 +3,7 @@
 .biodiversity {
   .bee {
     width: 100%;
-    animation: myOrbit 5s linear 5s infinite;
+    animation: bzzz 5s linear 5s infinite;
     
     .body {
       fill: $color-darker;
@@ -11,7 +11,7 @@
   }
 }
 
-@keyframes myOrbit {
+@keyframes bzzz {
   0% { transform: rotate(1deg) ; }
   1% { transform: rotate(7deg) ; }
   2% { transform: rotate(-5deg) ; }

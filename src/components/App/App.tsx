@@ -10,6 +10,7 @@ import Biodiversity from 'components/dashboard/Biodiversity';
 import { useCustomerStore } from 'store/customer';
 import Login, { LogoutButton } from 'components/login/Login';
 import './styles/app.scss';
+import { getAuthToken } from 'misc/authentication';
 
 const App = () => {
   const [admin, setAdmin] = useState(false)
@@ -20,7 +21,7 @@ const App = () => {
 
   const customerId = useCustomerStore((data) => data.customerId);
 
-  if (customerId === undefined) {
+  if (customerId === undefined || getAuthToken() === null) {
     return (
       <div className="app d-flex pb-4 align-items-center position-relative">
         <Login />

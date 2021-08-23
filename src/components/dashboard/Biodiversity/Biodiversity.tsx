@@ -12,6 +12,7 @@ type DatePoint = BiodiversityData & {
   distance?: number
   before?: boolean
 }
+const MS_IN_DAY = 86400000;
 
 const Biodiversity = () => {
   const [data, setData] = useState<BiodiversityData[]>()
@@ -24,9 +25,18 @@ const Biodiversity = () => {
     })
     .then((response) => response.json())
     .then((response: BiodiversityData[]) => {
-      setData(response.sort((a, b) => a.date_month - b.date_month));
+      if (response) {
+        setData(response.sort((a, b) => a.date_month - b.date_month));
+      }
     })
   }, []);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setToday(new Date())
+    }, MS_IN_DAY)
+    return () => clearInterval(interval);
+  }, [today])
 
   const biodiversityData = useMemo(() => {
     if (!data) return null;
@@ -52,11 +62,11 @@ const Biodiversity = () => {
     const distanceBetweenLastAndNow = today.getTime() - last.date.getTime();
     const fraction =  distanceBetweenLastAndNow / distanceBetweenLastAndNext;
     const biodiversity = lerp(last.biodiversity, next.biodiversity, fraction)
-    const season = datePoints.sort((a, b) => (Math.abs(a.distance ?? 0) - (b.distance ?? 0)))[0];
-
+    const season = datePoints.sort((a, b) => (Math.abs(a.distance ?? 0) - Math.abs(b.distance ?? 0)))[0];
     return { season, biodiversity }
   }, [data, today])
-console.log(biodiversityData)
+
+  console.log(today, biodiversityData?.season.name)
   return (
     <Widget className="biodiversity">
       <WidgetHeader>

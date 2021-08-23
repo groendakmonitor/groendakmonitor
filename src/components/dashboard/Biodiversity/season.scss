@@ -2,10 +2,26 @@
 
 .season {
   .icon {
-    background-image: url('icons/season-summer.svg');
+
     background-size: cover;
-    height: 1.5rem;
-    width: 1rem;
+    height: 16px;
+    width: 16px;
     flex-shrink: 0;
+    
+    &-winter {
+      background-image: url('icons/season-winter.svg');
+    }
+
+    &-summer {
+      background-image: url('icons/season-summer.svg');
+    }
+
+    &-spring {
+      background-image: url('icons/season-spring.svg');
+    }
+
+    &-autumn {
+      background-image: url('icons/season-autumn.svg');
+    }
   }
 }
