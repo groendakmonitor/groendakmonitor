@@ -11,11 +11,11 @@ const WaterChart = () => {
   }, []);
 
   return (
-    <Widget loading={loading}>
+    <Widget loading={loading} className="d-flex flex-column">
       <WidgetHeader>
         <span className="title">Waterbalans</span>
       </WidgetHeader>
-      <WidgetBody>
+      <WidgetBody className="flex-1 mt-auto">
         <div id="main-chart">
           <LineChart />
         </div>
