@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="16px" height="16px" viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFA500;stroke-width:1.057;stroke-linecap:round;}
+	.st1{fill:#FFA500;stroke:#FFA500;stroke-width:1.057;}
+</style>
+<script  xmlns=""></script>
+<g id="day">
+	<g transform="translate(32,32)">
+		<g>
+			<g>
+				<line class="st0" x1="-24" y1="-19.2" x2="-24" y2="-17.7"/>
+			</g>
+			<g transform="rotate(45)">
+				<line class="st0" x1="-33.9" y1="4.8" x2="-33.9" y2="6.3"/>
+			</g>
+			<g transform="rotate(90)">
+				<line class="st0" x1="-24" y1="28.8" x2="-24" y2="30.3"/>
+			</g>
+			<g transform="rotate(135)">
+				<line class="st0" x1="0" y1="38.7" x2="0" y2="40.3"/>
+			</g>
+			<g transform="rotate(180)">
+				<line class="st0" x1="24" y1="28.8" x2="24" y2="30.3"/>
+			</g>
+			<g transform="rotate(225)">
+				<line class="st0" x1="33.9" y1="4.8" x2="33.9" y2="6.3"/>
+			</g>
+			<g transform="rotate(270)">
+				<line class="st0" x1="24" y1="-19.2" x2="24" y2="-17.7"/>
+			</g>
+			<g transform="rotate(315)">
+				<line class="st0" x1="0" y1="-29.2" x2="0" y2="-27.6"/>
+			</g>
+		</g>
+		<circle class="st1" cx="-24" cy="-24" r="2.6"/>
+	</g>
+</g>
+</svg>
