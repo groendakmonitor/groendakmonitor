@@ -1,9 +1,9 @@
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
 import { ReactComponent as Bee } from 'assets/images/bee.svg';
-import './biodiversity.scss';
 import { useEffect, useState } from "react";
 import { getAuthHeader } from "misc/authentication";
 import { BiodiversityData } from "models/biodiversity";
+import './biodiversity.scss';
 
 type DatePoint = BiodiversityData & { 
   date?: Date
@@ -13,7 +13,7 @@ type DatePoint = BiodiversityData & {
 
 const Biodiversity = () => {
   const [data, setData] = useState<BiodiversityData[]>()
-  const [today, setToday] = useState<Date>(new Date(2021, 7, 7))
+  const [today, setToday] = useState<Date>(new Date(2021, 10, 5))
 
   useEffect(() => {
     fetch(`${process.env.REACT_APP__API_URL}/biodiversity`, {
@@ -26,8 +26,6 @@ const Biodiversity = () => {
     })
   }, []);
 
-  // console.log(data)
-// 
   useEffect(() => {
     if (!data) return;
     const datePointsRaw: DatePoint[] = [
@@ -44,18 +42,19 @@ const Biodiversity = () => {
       return acc
     }, []);
     const sorted = datePoints.sort((a, b) => (a.distance ?? 0) - (b.distance ?? 0));
-    // console.log(sorted)
-    const [last, next] = sorted.filter(dp => dp.distance !== undefined && dp.distance >= 0);
-    console.log(last)
-    console.log(next)
-    
-    if (last.distance === undefined || last.distance === undefined || last.before === undefined || !last.date || !next.date) return; // ensure typescript understands these are not undefined
-    const distanceBetweenlastAndnext = Math.abs(last.date.getTime() - next.date.getTime());
-    console.log('index ', sorted.indexOf(last) )
-    // const takeFrom = (last.before! ? last : next)
-    // const fraction = Math.abs(takeFrom.date!.getTime() - today.getTime()) / distanceBetweenlastAndnext
-    console.log('full distance ', distanceBetweenlastAndnext)
-    // console.log('fraction ', fraction)
+    console.log(sorted)
+    const last = sorted.find(dp => dp.distance !== undefined && dp.distance >= 0);
+    if (!last?.date) return;
+    const next = sorted[sorted.indexOf(last) - 1];
+        if (!next.date) return;
+    const distanceBetweenLastAndNext = next.date.getTime() - last.date.getTime();
+    const distanceBetweenLastAndNow = today.getTime() - last.date.getTime();
+    const fraction =  distanceBetweenLastAndNow / distanceBetweenLastAndNext;
+    const biodiversity = lerp(last.biodiversity, next.biodiversity, fraction)
+
+    console.log('fraction ', fraction)
+    console.log('biodiversity ', biodiversity)
+    return
   }, [data, today])
 
   return (
