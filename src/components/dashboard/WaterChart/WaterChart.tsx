@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LineChart from "./LineChart";
 import Widget, { WidgetBody, WidgetHeader } from "../Widget";
+import "./styles/water-chart.scss"
 
 const WaterChart = () => {
   const [loading, setLoading] = useState(true);
@@ -11,7 +12,7 @@ const WaterChart = () => {
   }, []);
 
   return (
-    <Widget loading={loading} className="d-flex flex-column">
+    <Widget loading={loading} className="water-chart d-flex flex-column">
       <WidgetHeader>
         <span className="title">Waterbalans</span>
       </WidgetHeader>

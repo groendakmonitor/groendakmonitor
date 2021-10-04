@@ -1,0 +1,17 @@
+@import "../../../../scss/bootstrap.scss";
+
+body[theme="zinco"] {
+  .water-chart {
+    .widget-body::after {
+      content: "";
+      position: absolute;
+      right: 0.5rem;
+      top: 3rem;
+      width: 4rem;
+      height: 4rem;
+      background: url(https://zinco.nl/images/LogoZinco.svg);
+    }
+  }
+
+}
+
