@@ -66,7 +66,6 @@ const Biodiversity = () => {
     return { season, biodiversity }
   }, [data, today])
 
-  console.log(today, biodiversityData?.season.name)
   return (
     <Widget className="biodiversity">
       <WidgetHeader>

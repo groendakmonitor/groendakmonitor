@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import WaterChart from '../dashboard/WaterChart';
 import Weather from '../dashboard/Weather';
 import WaterSaved from '../dashboard/WaterSaved';
@@ -20,6 +20,12 @@ const App = () => {
   })
 
   const customerId = useCustomerStore((data) => data.customerId);
+  const theme = useCustomerStore((data) => data.customerData?.theme);
+
+  useEffect(() => {
+    document.body.setAttribute("theme", theme ?? "groendakmonitor");
+  }, [theme])
+
 
   if (customerId === undefined || getAuthToken() === null) {
     return (
@@ -28,6 +34,8 @@ const App = () => {
       </div>
     )
   }
+
+
 
   return (
     <div className="app d-flex pb-4 align-items-center position-relative">
