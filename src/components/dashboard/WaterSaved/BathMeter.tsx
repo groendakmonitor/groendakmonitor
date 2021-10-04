@@ -19,7 +19,7 @@ const BathMeter = ({ diff }: Props) => {
 
   return (
     <>
-      <div className="text-nowrap text-truncate">{bathtubs.toFixed(1)}  badkuipen</div>
+      <div className="text-nowrap font-smaller text-truncate mt-1">{bathtubs.toFixed(1)}  badkuipen</div>
       <div className="bath-meter">
         <Bath fraction={fractionalBathtub} />
         {[...Array(Math.min(Math.floor(bathtubs), MAX_TUBS-1))].map((_, index: number) => (

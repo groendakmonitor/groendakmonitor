@@ -2,7 +2,7 @@
 
 .weather {
   .box {
-    background: $color-darker 0% 0% no-repeat padding-box;
+    background: $color-darker-groendakmonitor 0% 0% no-repeat padding-box;
     border-radius: 10px;
   }
 
@@ -15,7 +15,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .weather_icon {
     width: 100%;
     padding-bottom: 100%;
@@ -74,10 +74,18 @@
 
   .temperature {
     font-size: x-large;
-    color: $color-text-large;
+    color: $color-text-large-groendakmonitor;
   }
 
   .news-title {
     background: #FFFFFF73 0% 0% no-repeat padding-box;
+  }
+}
+
+body[theme="zinco"] {
+  .weather {
+    .box {
+      background: $color-darker-zinco 0% 0% no-repeat padding-box;
+    }
   }
 }

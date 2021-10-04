@@ -2,10 +2,16 @@
 
 .water-saved {
   .box {
-    background: $color-darker 0% 0% no-repeat padding-box;
+    background: $color-darker-groendakmonitor 0% 0% no-repeat padding-box;
     margin-top: -9px;
     border-radius: 10px;
-    
   }
 }
 
+body[theme="zinco"] {
+  .water-saved {
+    .box {
+      background: $color-darker-zinco 0% 0% no-repeat padding-box;
+    }
+  }
+}

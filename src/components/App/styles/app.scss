@@ -1,4 +1,5 @@
 @import "./../../../assets/fonts/Quicksand-VariableFont_wght.ttf";
+@import "../../../scss/bootstrap.scss";
 
 .app {
   font-family: Quicksand, 'Open Sans', sans-serif;
@@ -29,6 +30,6 @@
 
 body[theme="zinco"] {
   .app {
-    background: #87b539;
+    background: $color-primary-zinco;
   }
 }

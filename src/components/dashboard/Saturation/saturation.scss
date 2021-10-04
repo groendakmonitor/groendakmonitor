@@ -4,15 +4,32 @@
   height: 124px;
 
   .CircularProgressbar-trail {
-    stroke: $color-darker;
+    stroke: $color-darker-groendakmonitor;
   }
-  
+
   .CircularProgressbar-path {
-    stroke: $color-primary;
+    stroke: $color-primary-groendakmonitor;
   }
 
  .CircularProgressbar-text {
-   fill: $color-text-large;
+   fill: $color-text-large-groendakmonitor;
    font-weight: bold;
-  }  
+  }
+}
+
+
+body[theme="zinco"] {
+  .saturation-chart {
+    .CircularProgressbar-trail {
+      stroke: $color-darker-zinco;
+    }
+
+    .CircularProgressbar-path {
+      stroke: $color-primary-zinco;
+    }
+
+   .CircularProgressbar-text {
+     fill: $color-text-large-zinco;
+    }
+  }
 }

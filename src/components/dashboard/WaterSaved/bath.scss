@@ -10,15 +10,27 @@
 .bath {
   position: relative;
 
-  .bath-back { 
-    fill: $color-darker;
+  .bath-back {
+    fill: $color-darker-groendakmonitor;
   }
 
   .bath-front {
     left: 0;
     top: 6px;
 
-    fill: $color-primary;
+    fill: $color-primary-groendakmonitor;
     position: absolute;
+  }
+}
+
+body[theme="zinco"] {
+  .bath {
+    .bath-back {
+      fill: $color-darker-zinco;
+    }
+
+    .bath-front {
+      fill: $color-primary-zinco;
+    }
   }
 }

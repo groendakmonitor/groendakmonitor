@@ -11,19 +11,17 @@ const WaterSaved = () => {
   useEffect(() => {
     const stopLoading = () => setLoading(false);
     const timeout = setTimeout(stopLoading, 1000);
-    
+
     return () => clearTimeout(timeout);
   }, []);
 
-  
+
   const totalIncoming = useWaterStore(store => store.getTotalIncoming());
   const totalOutgoing = useWaterStore(store => store.getTotalOutgoing());
 
   const diff = useMemo(() => {
     return Math.max(totalIncoming - totalOutgoing, 0);
   }, [totalIncoming, totalOutgoing])
-
-  // const [diff, setDiff ] = useState(0)
 
   return (
     <Widget loading={loading} className="water-saved d-flex flex-column">
@@ -39,7 +37,6 @@ const WaterSaved = () => {
             </div>
             <div className="d-flex justify-content-center pb-2">
               <Odometer
-                // className="align-self-end"
                 size={24}
                 number={diff}
                 speed={500}

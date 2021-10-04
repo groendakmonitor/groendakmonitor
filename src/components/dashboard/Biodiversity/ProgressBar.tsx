@@ -11,7 +11,7 @@ const ProgressBar = (props: Props) => {
     className = ""
   } = props;
   return (
-    <div className={`my-progress-bar ${className}`}>
+    <div className={`my-progress-bar align-items-center ${className}`}>
       <div className="bar col p-0 ">
         <div className="track h-100" style={{ width: `${value}%`}}/>
       </div>

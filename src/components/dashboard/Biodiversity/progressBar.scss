@@ -3,17 +3,29 @@
 .my-progress-bar {
   .bar {
     height: 1rem;
-    background-color: $color-darker;
+    background-color: $color-darker-groendakmonitor;
     border-radius: 12px;
 
     .track {
       border-top-left-radius: 12px;
       border-bottom-left-radius: 12px;
-      background-color: $color-primary;
+      background-color: $color-primary-groendakmonitor;
     }
   }
-  
+
   .label {
     margin-top: -2px;
+  }
+}
+
+body[theme="zinco"] {
+  .my-progress-bar {
+    .bar {
+      background: $color-darker-zinco;
+
+      .track {
+        background-color: $color-primary-zinco;
+      }
+    }
   }
 }

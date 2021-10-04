@@ -8,21 +8,21 @@
   background-color: rgba(255, 255, 255, 0.4);
   backdrop-filter: blur(10px);
 
-  
+
   .widget-header {
     background-color: #FFFFFF73;
     border-bottom: 1px solid rgba(33,40,50,.125);
     border-radius: 10px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    
+
     .title {
       font-size: 25px;
       font-weight: 500;
-      color: $color-text-large;
+      color: $color-text-large-groendakmonitor;
     }
   }
-  
+
   .widget-body {
   }
 
@@ -36,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
     .spinner {
       animation: spinner-rotation 1.4s linear infinite;
       stroke: #4285f4;

@@ -2,6 +2,7 @@ import React, { useEffect, useMemo } from 'react'
 import { Line } from '@reactchartjs/react-chart.js'
 import { useWaterStore } from 'store/water'
 import { useCustomerStore } from 'store/customer'
+import { Theme } from 'static/theme'
 
 const options = {
   scales: {
@@ -31,9 +32,24 @@ const options = {
 }
 
 const WATER_FETCH_INTERVAL = 120000; // two minutes
+
+const COLOR_OUTGOING_GROENDAKMONITOR = 'rgb(129, 173, 248)';
+const COLOR_OUTGOING_ZINCO = '#87b539';
+const COLOR_INCOMING_GROENDAKMONITOR = 'rgb(66, 133, 244)';
+const COLOR_INCOMING_ZINCO = '#749a32';
+
+const getColor = (inOrOut: 'outgoing' | 'incoming', theme: Theme) => {
+  switch (theme) {
+    case 'groendakmonitor':
+      return inOrOut === 'outgoing' ? COLOR_OUTGOING_GROENDAKMONITOR : COLOR_INCOMING_GROENDAKMONITOR;
+    case 'zinco':
+      return inOrOut === 'outgoing' ? COLOR_OUTGOING_ZINCO : COLOR_INCOMING_ZINCO;
+  }
+}
+
 interface LineData {
   labels: string[];
-  datasets: { 
+  datasets: {
     label: string,
     data: number[];
     fill: "start";
@@ -44,6 +60,7 @@ interface LineData {
 const LineChart = () => {
   // const [data, setData] = useState<LineData>()
   const customerId = useCustomerStore((data) => data.customerId);
+  const theme = useCustomerStore((data) => data.customerData?.theme) ?? "groendakmonitor";
   const waterData = useWaterStore((data) => data.waterData);
   const fetchWaterData = useWaterStore((data) => data.fetchWaterData);
 
@@ -60,7 +77,6 @@ const LineChart = () => {
     const incomingData: number[] = [];
     const outgoingData: number[] = [];
     return waterData.reduce<LineData>((acc, value) => {
-      // acc.labels.push(date.toLocaleTimeString());
       acc.labels.push(value.date);
       incomingData.push(value.incoming);
       outgoingData.push(value.outgoing);
@@ -70,11 +86,11 @@ const LineChart = () => {
       datasets: [{
         label: 'Uitgaand water',
         data: outgoingData,
-        backgroundColor: 'rgb(129, 173, 248)',
+        backgroundColor: getColor('outgoing', theme),
         fill: "start",
       }, {
         label: 'Inkomend water',
-        backgroundColor: 'rgb(66, 133, 244)',
+        backgroundColor: getColor('incoming', theme),
         data: incomingData,
         fill: "start",
       }]
