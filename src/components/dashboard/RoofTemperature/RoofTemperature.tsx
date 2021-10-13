@@ -28,13 +28,13 @@ const RoofTemperature = () => {
           <div className="col-6">
             <RoofNormal className="roof"/>
             <div className="text-center">
-              {temps.normal.toFixed(2)}°
+              {temps.normal.toFixed(1)}°
             </div>
           </div>
           <div className="col-6">
             <RoofGreen className="roof green" />
             <div className="text-center">
-              {temps.green.toFixed(2)}°
+              {temps.green.toFixed(1)}°
             </div>
           </div>
         </div>
