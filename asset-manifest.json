@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/groendakmonitor/static/css/main.9ad01c2d.chunk.css",
-    "main.js": "/groendakmonitor/static/js/main.ca401757.chunk.js",
-    "main.js.map": "/groendakmonitor/static/js/main.ca401757.chunk.js.map",
+    "main.js": "/groendakmonitor/static/js/main.05c63ebe.chunk.js",
+    "main.js.map": "/groendakmonitor/static/js/main.05c63ebe.chunk.js.map",
     "runtime-main.js": "/groendakmonitor/static/js/runtime-main.c83a8158.js",
     "runtime-main.js.map": "/groendakmonitor/static/js/runtime-main.c83a8158.js.map",
     "static/css/2.6c0f60ba.chunk.css": "/groendakmonitor/static/css/2.6c0f60ba.chunk.css",
@@ -18,7 +18,7 @@
     "static/media/bee.ca6500e5.svg": "/groendakmonitor/static/media/bee.ca6500e5.svg",
     "static/media/groendak.8ad2a181.jpg": "/groendakmonitor/static/media/groendak.8ad2a181.jpg",
     "static/media/loading.d131c503.svg": "/groendakmonitor/static/media/loading.d131c503.svg",
-    "static/media/roof-green.7b908a6d.svg": "/groendakmonitor/static/media/roof-green.7b908a6d.svg",
+    "static/media/roof-green.bd4aec56.svg": "/groendakmonitor/static/media/roof-green.bd4aec56.svg",
     "static/media/roof-normal.955a14ec.svg": "/groendakmonitor/static/media/roof-normal.955a14ec.svg",
     "static/media/season.scss": "/groendakmonitor/static/media/season-winter.3b97e757.svg",
     "static/media/weather.scss": "/groendakmonitor/static/media/weather_icon_thunder.84842da1.svg"
@@ -28,6 +28,6 @@
     "static/css/2.6c0f60ba.chunk.css",
     "static/js/2.7620a95e.chunk.js",
     "static/css/main.9ad01c2d.chunk.css",
-    "static/js/main.ca401757.chunk.js"
+    "static/js/main.05c63ebe.chunk.js"
   ]
 }
