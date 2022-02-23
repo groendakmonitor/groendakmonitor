@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Line } from '@reactchartjs/react-chart.js'
 import { useWaterStore } from 'store/water'
 import { useCustomerStore } from 'store/customer'
@@ -95,7 +95,7 @@ const LineChart = () => {
         fill: "start",
       }]
     });
-  }, [waterData]);
+  }, [waterData, theme]);
 
   return (
   <>
